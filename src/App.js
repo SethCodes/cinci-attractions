@@ -29,6 +29,7 @@ class App extends Component {
       <img src={image4} className="sliderimg" alt=""/>
     </AliceCarousel>
     </div>
+
     </BrowserRouter>
     );
   }
