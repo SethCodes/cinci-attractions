@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contact = () => {
+const Blog = () => {
     return (
         <div className="container">
         <h4 className="center">Home</h4>
@@ -10,4 +10,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Blog
