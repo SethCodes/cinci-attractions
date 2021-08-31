@@ -1,49 +1,76 @@
-import React from 'react';
-import Cont1_desk from '../media/cont1_desk.jpg';
-import Cont2a_desk from '../media/cont2a_desk.jpg';
-import Cont2b_desk from '../media/cont2b_desk.jpg';
-import Cont2c_desk from '../media/cont2c_desk.jpg';
-import Cont1_mobile from '../media/cont1_mobile.jpg';
-import Cont2a_mobile from '../media/cont2a_mobile.jpg';
-import Cont2b_mobile from '../media/cont2b_mobile.jpg';
-import Cont2c_mobile from '../media/cont2c_mobile.jpg';
+import React, { useState, useEffect } from 'react';
 import './About.css';
+import Cont1_desk from '../media/cont1_desk.jpg';
+import Cont1_mobile from '../media/cont1_mobile.jpg';
+import Image1 from '../media/image1.jpg'
+import Image2 from '../media/image2.jpg'
+import Image3 from '../media/image3.jpg'
+
 
 const About = () => {
-    const imageUrl1 = window.innerWidth >= 650 ? desktopImage1 : mobileImage1;
-    const imageUrl2 = window.innerWidth >= 650 ? desktopImage2 : mobileImage2;
-    const imageUrl3 = window.innerWidth >= 650 ? desktopImage3 : mobileImage3;
-    const imageUrl4 = window.innerWidth >= 650 ? desktopImage4 : mobileImage4;
-    const imageUrl5 = window.innerWidth >= 650 ? desktopImage5 : mobileImage5;
+    const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
+    // {const imageUrl2 = useWindowWidth() >= 650 ? Cont2_desk  : Cont2_mobile;
+    // const imageUrl3 = useWindowWidth() >= 650 ? Cont3_desk  : Cont3_mobile;
+    // const imageUrl4 = useWindowWidth() >= 650 ? Cont4_desk  : Cont4_mobile;
+    // const imageUrl5 = useWindowWidth() >= 650 ? Cont5_desk  : Cont5_mobile;}
     return (
-        <div className="container">
+        <div className="container" >
             <div className="container-1" style={{backgroundImage: `url(${imageUrl1})` }}>
-                <img src={Cont1} alt="backImg1" />
-                <h4 className="center">About us</h4>
+                <div className="content1">
+                    <h4 className="center">About us</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
             </div>
-            <div className="container-2" style={{backgroundImage: `url(${imageUrl2})` }}>
-                <img src={Cont2a} alt="backImg2a" />
-                <h4 className="center">Our mission</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+            <div className="container-2" >
+                <div className="container" id="content2">
+                    <div className="container" id="content2a">
+                        <h4 className="center">Our mission</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                    </div>
+                    <div className="container" id="content2b">
+                        <div id="imgRow">
+                            <img id="img1" src={Image1} alt="neon-lights1" />
+                            <img id="img2" src={Image2} alt="neon-lights2" />
+                        </div>
+                        <img id="img3" src={Image3} alt="neon-lights3" />
+                    </div>
+                </div>
             </div>
-            <div className="container-3" style={{backgroundImage: `url(${imageUrl3})` }}>
-                <img src={Cont2b} alt="backImg2b" />
-                <h4 className="center">Our Team</h4>
+            <div className="container-3" >
+                <div className="content3">
+                    <h4 className="center">Our Team</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
             </div>
-            <div className="container-4" style={{backgroundImage: `url(${imageUrl4})` }}>
-                <img src={Cont2c} alt="backImg2c" />
-                <h4 className="center">Our Top Picks</h4>
+            <div className="container-4" >
+                <div className="content4">
+                    <h4 className="center">Our Top Picks</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
             </div>
-            <div className="container-5" style={{backgroundImage: `url(${imageUrl5})` }}>
-                <img src={Cont2a} alt="backImg2a" />
-                <h4 className="center">Local articles</h4>
+            <div className="container-5" >
+                <div className="content5">
+                    <h4 className="center">Local articles</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
             </div>
         </div>
     )
-}
+};
+
+const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize);
+    },[]);
+
+    return windowWidth;
+};
 
 export default About
