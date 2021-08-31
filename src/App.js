@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import Home from './components/Home';
+
 
 import Navbar from "./components/Navbar";
 class App extends Component {
@@ -6,6 +8,7 @@ class App extends Component {
     return(
     <div className="App">
       <Navbar />
+      <Home />
     </div>
     );
   }
