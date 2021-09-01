@@ -27,7 +27,10 @@ const Blog = () => {
                             <img id="img1" src={Image1} alt="neon-lights1" />
                             <img id="img2" src={Image2} alt="neon-lights2" />
                         </div>
-                        <img id="img3" src={Image3} alt="neon-lights3" />
+                        <div id="imgRow2">
+                            <img id="img3" src={Image3} alt="neon-lights3" />
+                        </div>
+                        
                     </div>
                 </div>
             </div>
