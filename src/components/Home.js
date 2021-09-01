@@ -45,7 +45,7 @@ const Home = () => {
         <div className="row">
         {articles.map((attraction) => {
             return(
-            <div className="col-md-6 col-sm-12" key={attraction.id} style={{ backgroundImage: `url(${attraction.backgroundImg})` }}>
+            <div className="col-md-6 col-sm-12" key={attraction.id} style={{ backgroundImage: `url("${attraction.backgroundImg}")` }}>
                 <AttractionCard
                 id={attraction.id}
                 category={attraction.category}
