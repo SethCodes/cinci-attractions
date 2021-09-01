@@ -15,11 +15,11 @@ class App extends Component {
   render(){
     return(
       <BrowserRouter>
-    <div className="App">
       <Navbar />
+    <div className="App">
       <Switch>
-      <Route path='/about' component={About}/>
       <Route exact path='/' component={Home}/>
+      <Route path='/about' component={About}/>
       </Switch>
     
     </div>

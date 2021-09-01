@@ -11,13 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* var(--pink, #F6299F);
-var(--red, #fc094e);
-var(--blue, #2CB3AC);
-var(--purple, #7036aa);
-var(--dark, #22031f); */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+/* root {
+
+  var(--pink, #F6299F);
+  var(--red, #fc094e);
+  var(--blue, #2CB3AC);
+  var(--purple, #7036aa);
+  var(--dark, #22031f);
+} */
+
 .sliderimg{
   width: 100%;
   height: 500px;
-  object-fit: cover
+  object-fit: cover;
 }
