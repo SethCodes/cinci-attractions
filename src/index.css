@@ -16,4 +16,8 @@ var(--red, #fc094e);
 var(--blue, #2CB3AC);
 var(--purple, #7036aa);
 var(--dark, #22031f); */
-
+.sliderimg{
+  width: 100%;
+  height: 500px;
+  object-fit: cover
+}

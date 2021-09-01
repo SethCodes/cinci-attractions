@@ -1,20 +1,19 @@
-import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import React from 'react'
 
-const Navbar = (props) => {
+const Navbar = () => {
     return (
-        <nav className="nav-wrapper red darken-3">
+        <nav className="nav-wrapper black darken-3">
             <div className="container">
-                <a href="_" className="brand-logo">Cincinnati tour</a>
-                <ul className="center">
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/contact">Contac</NavLink></li>
-                </ul>
+            <a href="_" className="brand-logo">Cincinnati Attractions</a>
+            <ul className="right">
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/Shop"> Shop </a></li>
+             <li> <a href="/Blog"> Blog </a></li>
+        </ul>
             </div>
         </nav>
 
     )
 }
 
-export default withRouter(Navbar);
+export default Navbar

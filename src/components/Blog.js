@@ -7,11 +7,10 @@ import Image2 from '../media/image2.jpg'
 import Image3 from '../media/image3.jpg'
 
 
-const About = () => {
-    const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
+const Blog = () => {
     return (
         <div className="container" >
-            <div className="container-1" style={{backgroundImage: `url(${imageUrl1})` }}>
+            <div className="container-1" style={{backgroundImage: `url(${Image1})` }}>
                 <div className="content1">
                     <h4 className="center">About us</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
@@ -72,4 +71,4 @@ const useWindowWidth = () => {
     return windowWidth;
 };
 
-export default About
+export default Blog
