@@ -9,10 +9,6 @@ import Image3 from '../media/image3.jpg'
 
 const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
-    // {const imageUrl2 = useWindowWidth() >= 650 ? Cont2_desk  : Cont2_mobile;
-    // const imageUrl3 = useWindowWidth() >= 650 ? Cont3_desk  : Cont3_mobile;
-    // const imageUrl4 = useWindowWidth() >= 650 ? Cont4_desk  : Cont4_mobile;
-    // const imageUrl5 = useWindowWidth() >= 650 ? Cont5_desk  : Cont5_mobile;}
     return (
         <div className="container" >
             <div className="container-1" style={{backgroundImage: `url(${imageUrl1})` }}>
@@ -32,7 +28,10 @@ const About = () => {
                             <img id="img1" src={Image1} alt="neon-lights1" />
                             <img id="img2" src={Image2} alt="neon-lights2" />
                         </div>
-                        <img id="img3" src={Image3} alt="neon-lights3" />
+                        <div id="imgRow2">
+                            <img id="img3" src={Image3} alt="neon-lights3" />
+                        </div>
+                        
                     </div>
                 </div>
             </div>
