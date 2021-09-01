@@ -11,7 +11,7 @@ const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
     return (
         <div className="container" >
-            <div className="container-1" style={{backgroundImage: `url(${Image1})` }}>
+            <div className="container-1" style={{backgroundImage: `url(${imageUrl1})` }}>
                 <div className="content1">
                     <h4 className="center">About us</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
