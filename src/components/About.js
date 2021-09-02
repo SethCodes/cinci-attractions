@@ -16,18 +16,42 @@ import ToPick4 from '../media/toPick4.jpg'
 import ToPick5 from '../media/toPick5.jpg'
 import ToPick6 from '../media/toPick6.jpg'
 import ToPick7 from '../media/toPick7.jpg'
-
+import NewsApi from '../api/newsApi'
 
 const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
+
+    const NewsAPI = require('newsapi');
+    const newsapi = new NewsAPI('bbac26f2a1734825959bac16ed90df5c');
+
+    newsapi.v2.topHeadlines({
+    sources: 'bbc-news,the-verge',
+    q: 'bitcoin',
+    category: 'business',
+    language: 'en',
+    country: 'us'
+    }).then(response => {
+    console.log(response);
+        // {
+        //   status: "ok",
+        //   articles: [...]
+        // }
+    });
+
     return (
-        <div className="container" >
+        <div className="container" id="container" >
+
+            {/* container 1 - about us */}
+
             <div className="container-1" style={{backgroundImage: `url(${imageUrl1})` }}>
                 <div className="content1">
                     <h4 className="center">About us</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
                 </div>
             </div>
+
+            {/* container 2 - our mission */}
+
             <div className="container-2" >
                 <div className="row" id="content2">
                     <div className="col col-sm-3 col-md-4 col-lg-4" id="content2a">
@@ -46,6 +70,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            {/* container 3 - our team */}
+
             <div className="container-3" >
                 <div className="row" id="content3" >
                     <h4 className="center" id="cont3h4">Our Team</h4>
@@ -89,6 +116,9 @@ const About = () => {
                     </a>
                 </div>
             </div>
+
+            {/* container 4 - our top picks */}
+
             <div className="container-4" >
                 <div className="" id="content4">
                     <h4 className="center" id="cont4h4">Our Top Picks</h4>
@@ -120,10 +150,16 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            {/* container 5 - local articles */}
+
             <div className="container-5" >
                 <div className="content5">
                     <h4 className="center">Local articles</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
+                <div>
+                    {NewsApi}
                 </div>
             </div>
         </div>
