@@ -47,12 +47,15 @@ const Home = () => {
 
     return (
         <div className="container-fluid">
-         <AliceCarousel autoPlay autoPlayInterval="3000">
+        <div className="carouselDown">
+           <AliceCarousel autoPlay autoPlayInterval="3000">
       <img src={images} className="sliderimg" alt=""/>
       <img src={image2} className="sliderimg" alt=""/>
       <img src={image3} className="sliderimg" alt=""/>
       <img src={image4} className="sliderimg" alt=""/>
     </AliceCarousel>
+        </div>
+        
         <div className="container-fluid">
         <div className="row">
         {articles.map((attraction) => {
