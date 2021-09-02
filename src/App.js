@@ -1,8 +1,8 @@
 
-import React, {Component} from 'react'
+import React, { useState} from 'react'
 import Navbar from "./components/Navbar";
 import Home from './components/Home'
-// import './App.css'
+import LoginForm from './components/LoginForm';
 import About from './components/About'
 
 
@@ -11,12 +11,19 @@ import {BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 
-class App extends Component {
-  render(){
+const App = () => {
+
+
+  const [isShowLogin, setShowLogin] = useState(false);
+
+  const handleLoginCLick = () => {
+    setShowLogin((isShowLogin) => !isShowLogin);
+  }
     return(
       <BrowserRouter>
-      <Navbar />
     <div className="App">
+      <Navbar handleLoginClick={handleLoginCLick}  />
+      <LoginForm isShowLogin={isShowLogin} />
       <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/about' component={About}/>
@@ -27,5 +34,6 @@ class App extends Component {
     </BrowserRouter>
     );
   }
-}
+
 export default App;
+

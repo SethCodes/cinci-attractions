@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './About.css';
+
 import Cont1_desk from '../media/cont1_desk.jpg';
 import Cont1_mobile from '../media/cont1_mobile.jpg';
 import Image1 from '../media/image1.jpg'
