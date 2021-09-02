@@ -83,9 +83,12 @@ const About = () => {
                 </div>
             </div>
             <div className="container-4" >
-                <div className="content4">
-                    <h4 className="center">Our Top Picks</h4>
+                <div className="col" id="content4">
+                    <h4 className="center" id="cont4h4">Our Top Picks</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                </div>
+                <div>
+                    
                 </div>
             </div>
             <div className="container-5" >
