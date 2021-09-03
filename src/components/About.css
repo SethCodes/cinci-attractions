@@ -1,7 +1,9 @@
+
 /* About page */
-nav{
+
+/* nav{
     position: absolute !important; 
-}
+} */
 #container{
     margin: 0 !important;
     padding: 0 !important;
@@ -264,3 +266,5 @@ p{
     grid-row-start: 6;
     grid-row-end: 9;
 }
+
+/*newsApi component*/

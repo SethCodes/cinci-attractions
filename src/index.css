@@ -39,6 +39,7 @@ p{
 .carouselDown{
   position: relative;
   top: 0.9px;
+  z-index: 0;
 }
 .navbar {
   position: absolute;
@@ -76,6 +77,8 @@ p{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: absolute;
+  z-index: 1;
 }
 
 .form-box{

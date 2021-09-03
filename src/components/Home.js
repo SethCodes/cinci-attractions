@@ -20,7 +20,7 @@ const Home = () => {
   const day = date.getFullYear();
   
 
-
+  
   const articles = [
     {
       id: 1,
