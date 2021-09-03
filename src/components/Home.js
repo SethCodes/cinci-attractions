@@ -11,6 +11,7 @@ import image4 from "../images/carousel14.jpg";
 import Image1 from '../media/image1.jpg'
 import Image2 from '../media/image2.jpg'
 import Image3 from '../media/image3.jpg'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 const Home = () => {  
 
@@ -59,6 +60,34 @@ const Home = () => {
     </AliceCarousel>
         </div>
         
+        <div className="categoryChoice">
+       
+          <div className="catOne">
+           {/* icon */}
+            <h1>Park</h1>
+          </div>
+          <div className="catOne">
+           {/* icon */}
+            <h1>Food</h1>
+          </div>
+          <div className="catOne">
+           {/* icon */}
+            <h1>Activites</h1>
+          </div>
+          <div className="catOne">
+           {/* icon */}
+            <h1>NightLife</h1>
+          </div>
+          <div className="catOne">
+          <i class="fas fa-bus"></i>
+            <h1>Transport</h1>
+          </div>
+          <div className="catOne">
+           {/* icon */}
+            <h1>Art</h1>
+          </div>
+        </div>
+        
         <div className="container-fluid">
         <div className="row">
           {articles.map((attraction) => {
@@ -68,7 +97,7 @@ const Home = () => {
                 key={attraction.id}
                 style={{
                   backgroundImage: `url("${attraction.backgroundImg}")`
-                }}
+               }}
               >
                 <AttractionCard
                   id={attraction.id}
@@ -76,14 +105,21 @@ const Home = () => {
                   date={attraction.date}
                   title={attraction.title}
                   snippet={attraction.snippet}
-                />
+                /> 
               </div>
+              
             );
+            
           })}
         </div>
       </div>
     </div>
+
+    
   );
+
+
 };
+
 
 export default Home;
