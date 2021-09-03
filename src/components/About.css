@@ -267,4 +267,19 @@ p{
     grid-row-end: 9;
 }
 
-/*newsApi component*/
+/*news Api component*/
+
+.card{
+    width: 100%;
+    height: 18em;
+}
+.card-body{
+    background-color: rgb(22, 123, 163);
+}
+.card-title{
+    color: white;
+    font-size: 15px !important;
+}
+p.card-title{
+    text-decoration: none;
+}

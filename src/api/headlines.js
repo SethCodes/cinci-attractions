@@ -12,14 +12,14 @@ class Headlines extends Component {
  
     componentDidMount() {
         const apiUrl =
-            "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=63776d05d7374eea9f0e441a573b30a8";
+            "https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
  
         axios.get(apiUrl)
             .then((response) => {
                 this.setState({
-                    news: [[response.data.articles][response.data.title]]
+                    news: response.data.articles
                 })
-                console.log([[response.data.articles][response.data.title]]);
+                console.log(response.data.articles);
             })
             .catch((error) => console.log(error))
     }
