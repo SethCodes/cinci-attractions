@@ -6,8 +6,7 @@ class Headlines extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            news: [],
-            title: []
+            news: []
         };
     }
  
@@ -18,20 +17,18 @@ class Headlines extends Component {
         axios.get(apiUrl)
             .then((response) => {
                 this.setState({
-                    title:response.data.description,
-                    news: response.data.articles
+                    news: [[response.data.articles][response.data.title]]
                 })
-                console.log(response.data.articles);
+                console.log([[response.data.articles][response.data.title]]);
             })
             .catch((error) => console.log(error))
     }
  
     renderItems() {
-        return (
-            this.state.news.map((item) => (
+        return this.state.news.map((item) => (
             <SingleHeadline key={item.url} item={item}/>
         ));
-        )
+        
     }
  
  
