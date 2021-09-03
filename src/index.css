@@ -39,6 +39,7 @@ p{
 .carouselDown{
   position: relative;
   top: 0.9px;
+  z-index: 0;
 }
 /* .navbar {
   position: absolute;
@@ -86,6 +87,8 @@ align-items: center;}
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: absolute;
+  z-index: 1;
 }
 
 .form-box{
@@ -168,4 +171,26 @@ label {
 .show.active {
   transform: translateY(100px) scale(0) rotateY(180deg);
   opacity: 0;
+}
+.categoryChoice{
+
+  font-size: 2rem;
+  padding: 15px 20px;
+  list-style: none;
+  background-color: #9a04ff;
+  color: #fff;
+  margin: 2px;
+  /* display: flex; */
+  /* align-items: center; */
+  justify-content: flex-start;
+  /* cursor: move; */
+  column-count: 6;
+  column-gap: 10px;
+
+ 
+}
+
+.catOne {
+  display: flex;
+
 }
