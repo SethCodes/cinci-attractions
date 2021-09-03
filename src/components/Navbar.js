@@ -1,14 +1,21 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ( {handleLoginClick}) => {
+    const handleClick = () =>{
+     handleLoginClick();
+    }
+
     return (
-        <nav className="nav-wrapper red darken-3">
+        <nav className="nav-wrapper black darken-3">
             <div className="container">
-            <a href="_" className="brand-logo">Cincinnati tour</a>
+            <a href="_" className="brand-logo">Cincinnati Attractions</a>
             <ul className="right">
             <li> <a href="/"> Home </a></li>
-            <li> <a href="/about"> About </a></li>
-            <li> <a href="/contact"> Contact </a></li>
+            <li> <a href="/Shop"> Shop </a></li>
+             <li> <a href="/Blog"> Blog </a></li>
+             <li> <a href="/About"> About </a></li>
+             <li><a onClick={handleClick} className="login"> sign up</a></li>
+            
         </ul>
             </div>
         </nav>
