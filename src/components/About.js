@@ -16,27 +16,27 @@ import ToPick4 from '../media/toPick4.jpg'
 import ToPick5 from '../media/toPick5.jpg'
 import ToPick6 from '../media/toPick6.jpg'
 import ToPick7 from '../media/toPick7.jpg'
-import NewsApi from '../api/newsApi'
+// import NewsApi from '../api/newsApi'
 
 const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
 
-    const NewsAPI = require('newsapi');
-    const newsapi = new NewsAPI('bbac26f2a1734825959bac16ed90df5c');
+    // const NewsAPI = require('newsapi');
+    // const newsapi = new NewsAPI('bbac26f2a1734825959bac16ed90df5c');
 
-    newsapi.v2.topHeadlines({
-    sources: 'bbc-news,the-verge',
-    q: 'bitcoin',
-    category: 'business',
-    language: 'en',
-    country: 'us'
-    }).then(response => {
-    console.log(response);
-        // {
-        //   status: "ok",
-        //   articles: [...]
-        // }
-    });
+    // newsapi.v2.topHeadlines({
+    // sources: 'bbc-news,the-verge',
+    // q: 'bitcoin',
+    // category: 'business',
+    // language: 'en',
+    // country: 'us'
+    // }).then(response => {
+    // console.log(response);
+    //     // {
+    //     //   status: "ok",
+    //     //   articles: [...]
+    //     // }
+    // });
 
     return (
         <div className="container" id="container" >
@@ -159,7 +159,7 @@ const About = () => {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
                 </div>
                 <div>
-                    {NewsApi}
+                    {/* {NewsApi} */}
                 </div>
             </div>
         </div>

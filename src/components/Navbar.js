@@ -6,7 +6,7 @@ const Navbar = ( {handleLoginClick}) => {
     }
 
     return (
-        <nav className="nav-wrapper black darken-3">
+        <nav className="nav-wrapper blue ">
        
             <div className="container">
             <a href="_" className="brand-logo">Cincinnati Attractions</a>
