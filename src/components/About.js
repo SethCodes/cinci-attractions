@@ -11,6 +11,7 @@ import Horseman3 from '../media/horseman3.png'
 import Horseman4 from '../media/horseman4.png'
 import LinkedIn from '../media/linkedIn.png'
 import Twitter from '../media/twitter.png'
+import Instagram from '../media/instagram.png'
 import Github from '../media/github.png'
 import ToPick1 from '../media/toPick1.jpg'
 import ToPick2 from '../media/toPick2.jpg'
@@ -23,6 +24,7 @@ import Headlines from '../api/headlines';
 
 const About = () => {
 
+    /* Make container 1 responsive */
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
 
     return (
@@ -69,30 +71,30 @@ const About = () => {
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
                         <img src={ Horseman1 } alt="seth" id="teamPic"/>
                         <h5>Seth Stephens</h5>
-                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="https://www.linkedin.com/in/seththedev/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        <a href="https://www.instagram.com/seththedev/" id="piCont"><img src={Instagram} alt="twitter" id="teamSocial"/></a>
+                        <a href="https://github.com/SethCodes" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
                         <img src={ Horseman2 } alt="guille" id="teamPic"/>
                         <h5>Guillermo Cabral</h5>
-                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="https://www.linkedin.com/in/guillecabral/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        <a href="https://twitter.com/GuillermoECabr1" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
+                        <a href="https://github.com/GuilleCabral?tab=repositories" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
                         <img src={ Horseman3 } alt="todd" id="teamPic"/>
                         <h5>Todd Cunningham</h5>
-                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="https://www.linkedin.com/in/andrew-cunningham-b2362118b/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        
+                        <a href="https://github.com/tacunninghan4" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
                         <img src={ Horseman4 } alt="kushal" id="teamPic"/>
                         <h5>Kushal Patel</h5>
-                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="https://www.linkedin.com/in/kushal-patel-4a7898215/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        
+                        <a href="https://github.com/kushalpatel42" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                 </div>
                 <div id="buttonTeam">
@@ -145,7 +147,7 @@ const About = () => {
                     <h4 className="center">Local articles</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
                 </div>
-                <div>
+                <div className="container-5b">
                      <Headlines />
                 </div>
             </div>
@@ -153,6 +155,7 @@ const About = () => {
     )
 };
 
+/* Make container 1 responsive */
 const useWindowWidth = () => {
     const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
 

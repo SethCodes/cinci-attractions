@@ -8,6 +8,9 @@ import Image3 from '../media/image3.jpg'
 
 
 const Blog = () => {
+
+
+   
     return (
         <div className="container" >
             <div className="container-1" style={{backgroundImage: `url(${Image1})` }}>
