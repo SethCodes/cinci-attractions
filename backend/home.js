@@ -7,7 +7,7 @@ const homeSchema = new Schema({
        required: true
    },
     
-    tilte: {
+    title: {
         type: String,
         required: true
     },
@@ -35,5 +35,5 @@ const homeSchema = new Schema({
 
 }, {timestamps: true})
 
-const Home = mongoose.model('home', aboutSchema);
+const Home = mongoose.model('home', homeSchema);
 module.export = Home;

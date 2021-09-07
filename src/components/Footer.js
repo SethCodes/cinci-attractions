@@ -11,11 +11,11 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
+      {/* <h1 style={{ color: "#2bc6ff", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         GeeksforGeeks: A Computer Science Portal for Geeks
-      </h1>
+      </h1> */}
       <Container>
         <Row>
           <Column>

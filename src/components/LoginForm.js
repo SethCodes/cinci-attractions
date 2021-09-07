@@ -19,6 +19,7 @@ const LoginForm = ({ isShowLogin }) => {
             className="login-box"
              /> <br /><br />
              <input type="submit" value="Login" className="login-btn" />
+             <input type="submit" value="Create Account" className="login-btn" />
              </form>
              </div>
               </div>
