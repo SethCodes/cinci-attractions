@@ -92,10 +92,19 @@
     width: 70%;
     height: 25%;
     overflow: hidden;
+    /* object-fit: contain; */
 }
 #img1, #img2{
     width: 50%;
     height: auto;
+}
+#img1{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#img2{
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 #img3{
     width: 100%;
@@ -113,6 +122,7 @@
 }
 #p3{
     margin-top: 2%;
+    text-align: center;
 }
 
 /* images & text responsive */
@@ -281,4 +291,58 @@ p{
 }
 p.card-title{
     text-decoration: none;
+}
+
+/* make page responsive*/
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    #teaMember{
+        padding: 0;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+    #teamPic{
+        margin: 3%;
+        vertical-align: middle;
+    }
+    h5{
+        color: white;
+        font-size:1em !important;
+        margin-top: 0 !important;
+        align-items: center;
+        display: flex;
+    }
+    #teamSocial{
+        width: 2em;
+        height: auto;
+        color: white;
+        vertical-align: middle;
+        margin-top: 0;
+    }
+    #piCont{
+        display: flex;
+        height: 100%;
+        vertical-align: middle;
+        margin-left: 5%;
+        align-items: center;
+        
+    }
+    .container-3{
+        height: 190vh;
+    }
+    #buttonTeam{
+        margin-top: 0px;
+        text-align: center;
+    }
 }
