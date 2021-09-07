@@ -404,7 +404,7 @@ i{
     #teaMember{
         padding: 0;
         display: block;
-        vertical-align: middle;
+        /* vertical-align: middle; */
     }
     #teamPic{
         vertical-align: middle;
