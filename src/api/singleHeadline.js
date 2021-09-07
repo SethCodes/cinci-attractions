@@ -1,11 +1,11 @@
 import React from "react";
  
-const SingleHeadline = ({item}) => (
-    <a className="col-md-3 mb-3" href={item.url}>
+const SingleHeadline = ({url, image, title}) => (
+    <a className="col-md-3 mb-3" href={url}>
         <div className="card">
-            <img className="img-fluid" src={item.urlToImage} alt=""/>
+            <img className="img-fluid" src={image} alt=""/>
             <div className="card-body">
-                <p className="card-title">{item.title}</p>
+                <p className="card-title">{title}</p>
             </div>
         </div>
     </a>
