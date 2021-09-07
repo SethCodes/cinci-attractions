@@ -1,11 +1,12 @@
 
-import React, { useState} from 'react'
-import Navbar from "./components/Navbar";
-import Home from './components/Home'
+import React, { useState} from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import LoginForm from './components/LoginForm';
-import About from './components/About'
+import About from './components/About';
+import Event from './components/Event';
 import Footer from './components/Footer';
-
+import Blog from './components/Blog';
 import {BrowserRouter, Route, Switch } from "react-router-dom";
 
 
@@ -23,13 +24,16 @@ const App = () => {
       <BrowserRouter>
     <div className="App">
       <Navbar handleLoginClick={handleLoginCLick}  />
-      {/*<LoginForm isShowLogin={isShowLogin} />*/}
+      <LoginForm isShowLogin={isShowLogin} />
        
       <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/about' component={About}/>
-      <Footer /> 
+      <Route path='/Event' component={Event}/>
+      <Route path='/Blog' component={Blog}/>
+      
       </Switch>
+       <Footer />
     </div>
     
 
