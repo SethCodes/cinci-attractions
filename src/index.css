@@ -40,14 +40,25 @@ p{
   z-index: 0;
   position: relative;
   top: 0.9px;
+  z-index: 0;
 }
-.navbar {
+/* .navbar {
   position: absolute;
   background-color: #f9f9fd;
   width: 100%;
   height: 60px;
   left: 0px;
   top: 0px;
+} */
+.brand-logo{
+  text-decoration: none;
+}
+.nav-wrapper{
+align-items: center;}
+.navbar-toggler{
+  align-items: center;
+  float: right;
+  color: white;
 }
 
 .loginicon {

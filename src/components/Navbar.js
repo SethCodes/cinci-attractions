@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const Navbar = ( {handleLoginClick}) => {
-    const handleClick = () =>{
-     handleLoginClick();
-    }
+const Navbar = ({ handleLoginClick }) => {
+  const handleClick = () => {
+    handleLoginClick();
+  };
 
     return (
         <nav className="nav-wrapper blue ">
@@ -21,7 +21,4 @@ const Navbar = ( {handleLoginClick}) => {
             </div>
         </nav>
 
-    )
-}
-
-export default Navbar
+export default Navbar;

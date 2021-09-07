@@ -1,10 +1,10 @@
 
-import React, { useState} from 'react'
-import Navbar from "./components/Navbar";
-import Home from './components/Home'
+import React, { useState} from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import LoginForm from './components/LoginForm';
-import About from './components/About'
-import Shop from './components/Shop'
+import About from './components/About';
+import Shop from './components/Shop';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
 import {BrowserRouter, Route, Switch } from "react-router-dom";
@@ -31,9 +31,10 @@ const App = () => {
       <Route path='/about' component={About}/>
       <Route path='/Shop' component={Shop}/>
       <Route path='/Blog' component={Blog}/>
+      <Footer /> 
       </Switch>
     </div>
-    <Footer /> 
+    
 
     </BrowserRouter>
     
