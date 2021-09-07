@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const dbURI = "mongodb+srv://KableAcademy:Kable@cluster4.9l4dq.mongodb.net/cinci-attractions?retryWrites=true&w=majority";
 
+
+
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(port, 'localhost', () => {
   console.log('listening for request on port 3000');
@@ -26,10 +28,19 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(port, 'localhost', () => {
-  console.log('listening for request on port 3000');
+
+// mongoose and mongodb sandbox routes
+app.get('/add-Blog', (req, res) => {
+console.log(req);
+
+  //const blog = new Blog({
+//  id: ''
+ // title: 'new blog'
+ // snippet: ''
+ // Image: '
+ // content: ''
+ // address: ''
+ // website: ''
 });
-
-
 
 

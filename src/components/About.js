@@ -16,7 +16,6 @@ import ToPick4 from '../media/toPick4.jpg'
 import ToPick5 from '../media/toPick5.jpg'
 import ToPick6 from '../media/toPick6.jpg'
 import ToPick7 from '../media/toPick7.jpg'
-import NewsApi from '../api/newsApi'
 
 const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
@@ -159,7 +158,7 @@ const About = () => {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
                 </div>
                 <div>
-                    {NewsApi}
+                    {/*NewsApi*/}
                 </div>
             </div>
         </div>
