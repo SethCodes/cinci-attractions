@@ -12,7 +12,7 @@ const Navbar = ({ handleLoginClick }) => {
             <a href="_" className="brand-logo">Cincinnati Attractions</a>
             <ul className="right">
             <li> <a href="/"> Home </a></li>
-            <li> <a href="/Shop"> Shop </a></li>
+            <li> <a href="/Event"> Event </a></li>
              <li> <a href="/Blog"> Blog </a></li>
              <li> <a href="/About"> About </a></li>
              <li><a onClick={handleClick} className="login"> sign up</a></li>
@@ -20,5 +20,5 @@ const Navbar = ({ handleLoginClick }) => {
         </ul>
             </div>
         </nav>
-
+    )}
 export default Navbar;

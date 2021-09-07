@@ -127,7 +127,7 @@ const Home = () => {
             <h1>NightLife</h1>
           </div>
           <div className="catOne">
-          <i class="fas fa-bus"></i>
+          <i class="fas fa-bus-alt"></i>
             <h1>Transport</h1>
           </div>
           <div className="catOne">

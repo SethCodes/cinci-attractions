@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import About from './components/About';
-import Shop from './components/Shop';
+import Event from './components/Event';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
 import {BrowserRouter, Route, Switch } from "react-router-dom";
@@ -29,10 +29,11 @@ const App = () => {
       <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/about' component={About}/>
-      <Route path='/Shop' component={Shop}/>
+      <Route path='/Event' component={Event}/>
       <Route path='/Blog' component={Blog}/>
-      <Footer /> 
+      
       </Switch>
+       <Footer />
     </div>
     
 
