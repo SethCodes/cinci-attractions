@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import BACKEND_URL from '../config';
+import axios from 'axios';
 import AttractionCard from "./AttractionCard";
-import RedImg from "../images/img.png";
-import PurpleImg from "../images/Image-2.png";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import images from "../images/carousel11.jpg";
@@ -15,6 +15,9 @@ import Image3 from '../media/image3.jpg'
 
 
 const Home = () => {  
+
+  const [attractions, setattractions] = useState([]);
+
 
     const date = new Date();
   const day = date.getFullYear();
@@ -95,6 +98,16 @@ const Home = () => {
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
       }
   ];
+
+  useEffect(() => {
+    const getArticles = async () => {
+      const res = await axios.get(BACKEND_URL +  '/');
+      console.log(res.data);
+      
+
+    }
+
+  }, [])
 
 
     return (

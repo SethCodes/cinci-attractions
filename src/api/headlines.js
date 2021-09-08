@@ -19,7 +19,7 @@ class Headlines extends Component {
                 this.setState({
                     news: response.data.articles
                 })
-                console.log(response.data.articles);
+                // console.log(response.data.articles);
             })
             .catch((error) => console.log(error))
     }
