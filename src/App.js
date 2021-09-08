@@ -33,7 +33,7 @@ const App = () => {
       <Route path='/Blog' component={Blog}/>
       
       </Switch>
-       <Footer />
+      <Footer />
     </div>
     
 
