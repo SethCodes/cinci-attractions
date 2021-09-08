@@ -175,26 +175,35 @@ label {
   opacity: 0;
 }
 .categoryChoice{
-
+  
   font-size: 2rem;
-  padding: 15px 20px;
+  padding: 15px 15px;
   list-style: none;
-  background-color: #9a04ff;
+  background-color: #55a4ff;
   color: #fff;
-  margin: 2px;
-  display: flex;
+  /* margin: 2px; */
+  /* display: flex; */
   /* align-items: center; */
   justify-content: space-evenly;
-  /* cursor: move; */
   column-count: 6;
-  column-gap: 10px;
-
+  column-gap: 8px;
  
-}
+ }
 
 .catOne {
   display: flex;
+  /* display:block; */
   flex-direction: column;
-  
+  align-items: center;
+ 
 }
-
+.catOneicon { 
+max-width: 60px;
+}
+i.fas {
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0);
+  padding: 0.4em 0.4em;
+ 
+}

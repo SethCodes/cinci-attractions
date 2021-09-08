@@ -31,9 +31,15 @@ const App = () => {
       <Route path='/about' component={About}/>
       <Route path='/Event' component={Event}/>
       <Route path='/Blog' component={Blog}/>
+<<<<<<< HEAD
+     
+      </Switch>
+      <Footer />  
+=======
       
       </Switch>
-       <Footer />
+      <Footer />
+>>>>>>> f1f932f4274de89c7f0694c8eb5c2fac455e87b9
     </div>
     
 

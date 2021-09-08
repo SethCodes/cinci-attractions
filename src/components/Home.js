@@ -124,19 +124,24 @@ const Home = () => {
         <div className="categoryChoice text-center">
        
           <div className="catOne">
-           {/* icon */}
+           
+           <i class="fas fa-parking"></i>
             <h1>Park</h1>
           </div>
           <div className="catOne">
-           {/* icon */}
+           
+           <i class="fas fa-utensils catOneicon"></i>
             <h1>Food</h1>
           </div>
           <div className="catOne">
-           {/* icon */}
+           
+           
+           <i class="fas fa-star"></i>
             <h1>Activites</h1>
           </div>
           <div className="catOne">
-           {/* icon */}
+          
+           <i class="fas fa-cocktail"></i>
             <h1>NightLife</h1>
           </div>
           <div className="catOne">
@@ -144,7 +149,8 @@ const Home = () => {
             <h1>Transport</h1>
           </div>
           <div className="catOne">
-           {/* icon */}
+           
+           <i class="fas fa-feather"></i>
             <h1>Art</h1>
           </div>
         </div>
