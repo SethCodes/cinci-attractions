@@ -37,13 +37,13 @@ p{
 }
 
 .carouselDown{
+  z-index: -2;
   position: relative;
   top: 0.9px;
-  z-index: 0;
 }
 /* .navbar {
   position: absolute;
-  background-color: #24252A;
+  background-color: #f9f9fd;
   width: 100%;
   height: 60px;
   left: 0px;
@@ -52,14 +52,12 @@ p{
 .brand-logo{
   text-decoration: none;
 }
+
 .nav-wrapper{
 align-items: center;
 }
-.navbar-toggler{
-  align-items: center;
-  float: right;
-  color: white;
-}
+
+
 
 .loginicon {
   position: absolute;
@@ -88,7 +86,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  position: absolute;
+  position:absolute;
   z-index: 1;
 }
 
@@ -168,6 +166,9 @@ label {
   transition: 800ms;
   opacity: 1;
 }
+.container-fluid{
+  padding: 0;
+}
 
 .show.active {
   transform: translateY(100px) scale(0) rotateY(180deg);
@@ -181,9 +182,9 @@ label {
   background-color: #9a04ff;
   color: #fff;
   margin: 2px;
-  /* display: flex; */
+  display: flex;
   /* align-items: center; */
-  justify-content: flex-start;
+  justify-content: space-evenly;
   /* cursor: move; */
   column-count: 6;
   column-gap: 10px;
@@ -193,5 +194,7 @@ label {
 
 .catOne {
   display: flex;
-
+  flex-direction: column;
+  
 }
+

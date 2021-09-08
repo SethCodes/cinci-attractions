@@ -5,7 +5,10 @@ import Cont1_mobile from '../media/cont1_mobile.jpg';
 import Image1 from '../media/image1.jpg'
 import Image2 from '../media/image2.jpg'
 import Image3 from '../media/image3.jpg'
-import TeamGEC from '../media/teamGEC.jpg'
+import Horseman1 from '../media/horseman1.png'
+import Horseman2 from '../media/horseman2.png'
+import Horseman3 from '../media/horseman3.png'
+import Horseman4 from '../media/horseman4.png'
 import LinkedIn from '../media/linkedIn.png'
 import Twitter from '../media/twitter.png'
 import Github from '../media/github.png'
@@ -60,36 +63,36 @@ const About = () => {
             <div className="container-3" >
                 <div className="row" id="content3" >
                     <h4 className="center" id="cont3h4">Our Team</h4>
-                    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
+                    <p id="p3">Self-named 'the 4 horsemen', each one is worse than the last! </p>
                 </div>
                 <div id="team" className= "row">
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
-                        <img src={TeamGEC} alt="GEC" id="teamPic"/>
+                        <img src={ Horseman1 } alt="seth" id="teamPic"/>
                         <h5>Seth Stephens</h5>
-                        <a href="#"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><i class="fab fa-instagram"></i></a>
+                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
-                        <img src={TeamGEC} alt="GEC" id="teamPic"/>
+                        <img src={ Horseman2 } alt="guille" id="teamPic"/>
                         <h5>Guillermo Cabral</h5>
-                        <a href="#"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
-                        <img src={TeamGEC} alt="GEC" id="teamPic"/>
+                        <img src={ Horseman3 } alt="todd" id="teamPic"/>
                         <h5>Todd Cunningham</h5>
-                        <a href="#"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                     <div className="col-md-3 col-sm-12  center" id="teaMember">
-                        <img src={TeamGEC} alt="GEC" id="teamPic"/>
+                        <img src={ Horseman4 } alt="kushal" id="teamPic"/>
                         <h5>Kushal Patel</h5>
-                        <a href="#"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="#"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
+                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
                     </div>
                 </div>
                 <div id="buttonTeam">
@@ -143,6 +146,7 @@ const About = () => {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet!</p>
                 </div>
                 <div>
+                    {/*NewsApi*/}
                      <Headlines />
                 </div>
             </div>

@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import BACKEND_URL from '../config';
+import axios from 'axios';
 import AttractionCard from "./AttractionCard";
-import RedImg from "../images/img.png";
-import PurpleImg from "../images/Image-2.png";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import images from "../images/carousel11.jpg";
@@ -15,6 +15,9 @@ import Image3 from '../media/image3.jpg'
 
 
 const Home = () => {  
+
+  const [attractions, setattractions] = useState([]);
+
 
     const date = new Date();
   const day = date.getFullYear();
@@ -96,6 +99,16 @@ const Home = () => {
       }
   ];
 
+  useEffect(() => {
+    const getArticles = async () => {
+      const res = await axios.get(BACKEND_URL +  '/');
+      console.log(res.data);
+      
+
+    }
+
+  }, [])
+
 
     return (
         <div className="container-fluid">
@@ -108,7 +121,7 @@ const Home = () => {
     </AliceCarousel>
         </div>
         
-        <div className="categoryChoice">
+        <div className="categoryChoice text-center">
        
           <div className="catOne">
            {/* icon */}
@@ -127,7 +140,7 @@ const Home = () => {
             <h1>NightLife</h1>
           </div>
           <div className="catOne">
-          <i class="fas fa-bus"></i>
+          <i class="fas fa-bus-alt"></i>
             <h1>Transport</h1>
           </div>
           <div className="catOne">

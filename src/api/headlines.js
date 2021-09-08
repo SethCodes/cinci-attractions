@@ -12,12 +12,11 @@ class Headlines extends Component {
  
     componentDidMount() {
         const apiUrl =
-            "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=63776d05d7374eea9f0e441a573b30a8";
+            "https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
  
         axios.get(apiUrl)
             .then((response) => {
                 this.setState({
-                    title:response.data.articles.description,
                     news: response.data.articles
                 })
                 // console.log(response.data.articles);
@@ -26,14 +25,10 @@ class Headlines extends Component {
     }
  
     renderItems() {
-        return (
-            this.state.news.map((item) => (
-            <SingleHeadline key={item.url} image={item.urlToImage}
-                title={item.description}
-            />
-        ))
-        );
-
+        return this.state.news.map((item) => (
+            <SingleHeadline key={item.url} item={item}/>
+        ));
+        
     }
  
  
