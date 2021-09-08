@@ -31,9 +31,9 @@ const App = () => {
       <Route path='/about' component={About}/>
       <Route path='/Event' component={Event}/>
       <Route path='/Blog' component={Blog}/>
-      <Footer />
+     
       </Switch>
-       
+      <Footer />  
     </div>
     
 
