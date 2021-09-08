@@ -17,6 +17,10 @@ import Image3 from '../media/image3.jpg'
 const Home = () => {  
 
   const [attractions, setattractions] = useState([]);
+//   if(attractions.length > 0){
+//     let titleOne = attractions[0].title;
+// console.log(titleOne);
+//   }
 
 
     const date = new Date();
@@ -100,12 +104,13 @@ const Home = () => {
   ];
 
   useEffect(() => {
+
     const getArticles = async () => {
-      const res = await axios.get(BACKEND_URL +  '/');
-      console.log(res.data);
-      
+      const res = await axios.get(BACKEND_URL +  '/blogs');
+      setattractions(res.data);
 
     }
+    getArticles();
 
   }, [])
 
@@ -120,6 +125,7 @@ const Home = () => {
       <img src={image4} className="sliderimg" alt=""/>
     </AliceCarousel>
         </div>
+       
         
         <div className="categoryChoice text-center">
        
@@ -153,6 +159,11 @@ const Home = () => {
            <i class="fas fa-feather"></i>
             <h1>Art</h1>
           </div>
+        </div>
+
+        {/* //test div */}
+        <div className="">
+          <h1>{attractions ? "loading..." : attractions[0].title}</h1>
         </div>
         
         <div className="container-fluid">
