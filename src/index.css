@@ -56,9 +56,24 @@ p{
   text-decoration: none;
 }
 .navbar-brand{
-  margin-left: auto;
-  margin-right: auto;
+  /* position: absolute; */
+  /* padding-right: 68px; */
 }
+.navbar button:focus{
+  background-color: black;
+}
+.navbar-weather{
+  position: absolute;
+  top: 60px;
+  left: 10px;
+
+  display: flex;
+
+}
+.navbar-weather img{
+  height: 50px;
+}
+
 
 .nav-wrapper{
 align-items: center;
@@ -69,9 +84,9 @@ align-items: center;
   padding-right: 10px;
 }
 .nav-link{
-  border-bottom: 1px solid red;
   padding-bottom: 0;
   z-index: 5;
+  
 }
 
 
@@ -222,4 +237,19 @@ i.fas {
   box-shadow: 3px 3px 5px rgb(0, 0, 0);
   padding: 0.4em 0.4em;
  
+}
+
+
+/* medium screen size */
+@media only screen and (max-width: 991px) {
+  .nav-link{
+    border-bottom: 1px solid red;
+  }
+  .navbar-weather{
+    display: none;
+  }
+  .nav-link{
+    font-weight: 700;
+  font-size: 1.5rem;
+  }
 }
