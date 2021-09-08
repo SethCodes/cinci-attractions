@@ -30,9 +30,13 @@ const Navbar = ({ handleLoginClick }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
+
+      {/* logo / title */}
         <a className="navbar-brand" href="/">
           Cincinnati Attractions
         </a>
+
+        {/* nav toggler button */}
         <button
           className="navbar-toggler"
           type="button"

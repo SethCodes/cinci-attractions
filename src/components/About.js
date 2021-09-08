@@ -67,15 +67,9 @@ const About = () => {
                     <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman1 } alt="seth" id="teamPic"/>
                         <h5>Seth Stephens</h5>
-<<<<<<< HEAD
-                        <a href="#" id="piCont"><i class="fab fa-instagram"></i></a>
-                        <a href="#" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="#" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
-=======
                         <a target="blank" href="https://www.linkedin.com/in/seththedev/" id="piCont"><i id="teamSocial"  class="fab fa-linkedin-in fa-2x"></i></a>
                         <a target="blank" href="https://www.instagram.com/seththedev/" id="piCont"><i id="teamSocial" class="fab fa-instagram fa-2x"></i></a>
                         <a target="blank" href="https://github.com/SethCodes" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
->>>>>>> 75b84ffe914f5fa2678eb3fb51b1378fe0c40989
                     </div>
                     <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman2 } alt="guille" id="teamPic"/>

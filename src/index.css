@@ -49,14 +49,30 @@ p{
   left: 0px;
   top: 0px;
 } */
+.navbar{
+  padding: 0 20px 10px;
+}
 .brand-logo{
   text-decoration: none;
+}
+.navbar-brand{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-wrapper{
 align-items: center;
 }
-
+.nav-item{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.nav-link{
+  border-bottom: 1px solid red;
+  padding-bottom: 0;
+  z-index: 5;
+}
 
 
 .loginicon {
