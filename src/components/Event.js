@@ -1,14 +1,29 @@
-import React from 'react'
+import React from 'react';
+import './Event.css';
+import EventBckg from '../media/eventBckg.jpg'
+import Table from './table.js';
+
 
 const Event = () => {
+
     return (
-       
-            <div className="container">
-        <h4 className="center">Home</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quasi, vitae vero neque quis facere omnis, quibusdam est, delectus provident amet! Ullam adipisci repellendus quas cupiditate est, corporis ad consequuntur!</p>
-            
+        <div className="container" id="container" >
+
+            {/* container 1 - header events */}
+
+            <div className="container-header" style={{backgroundImage: `url(${ EventBckg })` }}>
+                <div className="content1">
+                    <h3>Events 2021</h3>
+                    <p id="evenText">Wondering what's happenning in <span id="cinci">Cincinnati</span>? Check our list out</p>
+                </div>
+            </div>
+
+            {/* container 2 - events */}
+
+            <div id="container-event" className="container">
+                <Table />
+            </div>
         </div>
-        
     )
 }
 

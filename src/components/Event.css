@@ -1,0 +1,86 @@
+
+                        /*Event page*/
+
+/*container 1 - header events */
+.container-header{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.content1{
+    text-align: center;
+    padding-top: 4em !important;
+    margin: 0 !important;
+}
+h3{
+    width: 6em;
+    font-size: 4em !important;
+    color: rgb(255, 255, 255) !important;
+}
+#evenText{
+    width: 100% !important;
+    font-size: 1.7em;
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+}
+#cinci{
+    color: rgb(85, 136, 248);
+    font-size: 1.8em;
+}
+
+/* container 2 - events */
+#container-event{
+    width: 100%;
+    height: 140vh;
+    background-color: rgb(27, 33, 39);
+    padding: 2em;
+}
+/*table*/
+/* #outCont{
+
+} */
+#title {
+    padding: 0.5em 0 1em 0;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+#holidays {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 70%;
+    margin: auto;
+    text-decoration: none;
+}
+#holidays td, #holidays th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+}
+#holidays tr:nth-child(even){
+    /* background-color: #f2f2f2; */
+    color: white;
+    
+}
+#holidays tr {
+    /* background-color: #ddd; */
+    color: white;
+    
+}
+#holidays th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    /* background-color: #2bc6ff; */
+    color: rgb(255, 255, 255);
+}
+td{
+    text-align: center;
+}
