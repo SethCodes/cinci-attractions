@@ -9,10 +9,6 @@ import Horseman1 from '../media/horseman1.png'
 import Horseman2 from '../media/horseman2.png'
 import Horseman3 from '../media/horseman3.png'
 import Horseman4 from '../media/horseman4.png'
-import LinkedIn from '../media/linkedIn.png'
-import Twitter from '../media/twitter.png'
-import Instagram from '../media/instagram.png'
-import Github from '../media/github.png'
 import ToPick1 from '../media/toPick1.jpg'
 import ToPick2 from '../media/toPick2.jpg'
 import ToPick3 from '../media/toPick3.jpg'
@@ -68,33 +64,31 @@ const About = () => {
                     <p id="p3">Self-named 'the 4 horsemen', each one is worse than the last! </p>
                 </div>
                 <div id="team" className= "row">
-                    <div className="col-md-3 col-sm-12  center" id="teaMember">
+                    <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman1 } alt="seth" id="teamPic"/>
                         <h5>Seth Stephens</h5>
-                        <a href="https://www.linkedin.com/in/seththedev/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="https://www.instagram.com/seththedev/" id="piCont"><img src={Instagram} alt="twitter" id="teamSocial"/></a>
-                        <a href="https://github.com/SethCodes" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a target="blank" href="https://www.linkedin.com/in/seththedev/" id="piCont"><i id="teamSocial"  class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a target="blank" href="https://www.instagram.com/seththedev/" id="piCont"><i id="teamSocial" class="fab fa-instagram fa-2x"></i></a>
+                        <a target="blank" href="https://github.com/SethCodes" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
                     </div>
-                    <div className="col-md-3 col-sm-12  center" id="teaMember">
+                    <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman2 } alt="guille" id="teamPic"/>
                         <h5>Guillermo Cabral</h5>
-                        <a href="https://www.linkedin.com/in/guillecabral/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        <a href="https://twitter.com/GuillermoECabr1" id="piCont"><img src={Twitter} alt="twitter" id="teamSocial"/></a>
-                        <a href="https://github.com/GuilleCabral?tab=repositories" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a target="blank" href="https://www.linkedin.com/in/guillecabral/" id="piCont"><i id="teamSocial"  class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a target="blank" href="https://twitter.com/GuillermoECabr1" id="piCont"><i id="teamSocial" class="fab fa-twitter fa-2x"></i></a>
+                        <a target="blank" href="https://github.com/GuilleCabral?tab=repositories" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
                     </div>
-                    <div className="col-md-3 col-sm-12  center" id="teaMember">
+                    <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman3 } alt="todd" id="teamPic"/>
                         <h5>Todd Cunningham</h5>
-                        <a href="https://www.linkedin.com/in/andrew-cunningham-b2362118b/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        
-                        <a href="https://github.com/tacunninghan4" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a target="blank" href="https://www.linkedin.com/in/andrew-cunningham-b2362118b/" id="piCont"><i id="teamSocial"  class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a target="blank" href="https://github.com/tacunninghan4" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
                     </div>
-                    <div className="col-md-3 col-sm-12  center" id="teaMember">
+                    <div className="col-md-3 col-sm-12 center" id="teaMember">
                         <img src={ Horseman4 } alt="kushal" id="teamPic"/>
                         <h5>Kushal Patel</h5>
-                        <a href="https://www.linkedin.com/in/kushal-patel-4a7898215/" id="piCont"><img src={LinkedIn} alt="linkedIn" id="teamSocial"/></a>
-                        
-                        <a href="https://github.com/kushalpatel42" id="piCont"><img src={Github} alt="github" id="teamSocial"/></a>
+                        <a target="blank" href="https://www.linkedin.com/in/kushal-patel-4a7898215/" id="piCont"><i id="teamSocial"  class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a target="blank" href="https://github.com/kushalpatel42" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
                     </div>
                 </div>
                 <div id="buttonTeam">

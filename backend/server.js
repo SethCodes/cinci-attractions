@@ -12,6 +12,12 @@ app.use(express.json());
 const blogRoutes = require('./routes/Blogs');
 app.use('/blogs', blogRoutes);
 
+const EventRoutes = require('./routes/Event');
+app.use('/Event', EventRoutes);
+
+
+
+
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(port, 'localhost', () => {
   console.log('listening for request on port 5000');
