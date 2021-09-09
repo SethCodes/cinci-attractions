@@ -34,14 +34,14 @@ router.route('/add').post((req, res) => {
 
 //category changes
 router.route('/park').get((req, res) => {
-    Blog.find({category: "parks"})
+    Blog.find({category: "Park"})
     .then((blog) => res.json(blog))
       
     .catch(err => console.log(err));
 
 });
 router.route('/food').get((req, res) => {
-    Blog.find({category: "food"})
+    Blog.find({category: "Food"})
     .then((blog) => res.json(blog))
       
     .catch(err => console.log(err));

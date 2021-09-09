@@ -14,8 +14,11 @@ app.use(express.json());
 
 //routes
 const blogRoutes = require('./routes/Blogs');
+const loginRoutes = require('./routes/login');
+const contactsRoutes = require('./routes/contacts');
 app.use('/blogs', blogRoutes);
-
+app.use('/login', loginRoutes);
+app.use('/contact', contactsRoutes)
 //home route
 app.get('/', (req, res) => {
   Blog.find()

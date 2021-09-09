@@ -1,43 +1,43 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect}from 'react'
 import BACKEND_URL from "../config";
 {/*import Signup from '../../backend/models';*/}
 import axios from 'axios';
 
-const LoginForm = ({ isShowLogin }) => {
-console.log(BACKEND_URL);
-const [username, setUsername] = useState("");
-const [password, setPassword] = useState("");
 
-const onChangeName = (e) => {
-    setUsername(e.target.value);
-}
-const onChangePass = (e) => {
-    setPassword(e.target.value);
-}
-
-const onSubmit = (e) => {
-    e.preventDefault();
-
-    const newLogin = {
-        username: username,
-        password: password
-    }
-
-   axios.get(BACKEND_URL +' /signup/add', newUser)
-   .then(res => console.log(res.data))
-   .catch(err => console.log(err));
+const ContactForm = ({ isShowLogin }) => {
+    console.log(BACKEND_URL);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     
+    const onChangeName = (e) => {
+        setUsername(e.target.value);
+    }
+    const onChangePass = (e) => {
+        setPassword(e.target.value);
+    }
+    
+    const onSubmit = (e) => {
+        e.preventDefault();
+    
+        const newLogin = {
+            email: email,
+            password: password
+        }
+    
+       axios.get(BACKEND_URL +' /ContactForm/add', newUser)
+       .then(res => console.log(res.data))
+       .catch(err => console.log(err));
 
-}
 
 
+const ContactForm = () => {
     return (
         <div className={ `${!isShowLogin ? "active" : ""} show`} >
         <div className="login-form">
         <div className="form-box solid">
         <form action="/" method="POST" onSubmit={onSubmit}>
             <h1 className="login-text"> sign In</h1>
-            <label>Username</label><br /><br />
+            <label>Email</label><br /><br />
             <input type="text"
             name="username"
             className="login-box"
@@ -58,6 +58,17 @@ const onSubmit = (e) => {
              </div>
     );
 }
+    
 
-export default LoginForm;
+
+export default ContactForm;
+
+
+
+
+
+
+
+
+
 
