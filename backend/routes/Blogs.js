@@ -34,7 +34,7 @@ router.route('/add').post((req, res) => {
 });
 
 //category changes
-router.route('/parks').get((req, res) => {
+router.route('/park').get((req, res) => {
     Blog.find({category: "parks"})
     .then((blog) => res.json(blog))
       

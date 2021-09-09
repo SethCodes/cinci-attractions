@@ -13,13 +13,15 @@ import Image2 from "../media/image2.jpg";
 import Image3 from "../media/image3.jpg";
 
 const Home = () => {
+
+  //initial state
   const [attractions, setattractions] = useState([]);
   const [titleOne, setTitleOne] = useState('');
-    // if(attractions.length > 0){
-    //   let titleOne = attractions[0].title;
-    //   setTitleOne(titleOne);
-    // }
+  const [category, setCategory] = useState("park");
 console.log(attractions);
+
+  
+  //get year for articles
   const date = new Date();
   const day = date.getFullYear();
 
@@ -98,14 +100,21 @@ console.log(attractions);
     }
   ];
 
+
   useEffect(() => {
     const getArticles = async () => {
-      const res = await axios.get(BACKEND_URL + "/blogs");
-      setattractions(res.data[2]);
+      const res = await axios.get(BACKEND_URL + "/blogs/" + category );
+      setattractions(res.data);
 
     };
     getArticles();
-  }, []);
+
+  }, [category]);
+
+  const categoryChange = (e) => {
+    e.preventDefault();
+    setCategory(e.target.innerHTML);
+  }
 
   return (
     <div className="container-fluid">
@@ -121,31 +130,54 @@ console.log(attractions);
       <div className="categoryChoice text-center">
         <div className="catOne">
           <i class="fas fa-parking"></i>
-          <h1>Park</h1>
+          <h1 onClick={categoryChange}>Park</h1>
         </div>
         <div className="catOne">
           <i class="fas fa-utensils catOneicon"></i>
-          <h1>Food</h1>
+          <h1 onClick={categoryChange}>Food</h1>
         </div>
         <div className="catOne">
           <i class="fas fa-star"></i>
-          <h1>Activites</h1>
+          <h1 onClick={categoryChange}>Activites</h1>
         </div>
         <div className="catOne">
           <i class="fas fa-cocktail"></i>
-          <h1>NightLife</h1>
+          <h1 onClick={categoryChange}>NightLife</h1>
         </div>
         <div className="catOne">
           <i class="fas fa-bus-alt"></i>
-          <h1>Transport</h1>
+          <h1 onClick={categoryChange}>Transport</h1>
         </div>
-        <div className="catOne">
+        <div className="catOne" >
           <i class="fas fa-feather"></i>
-          <h1>Art</h1>
+          <h1 onClick={categoryChange}>Art</h1>
         </div>
       </div>
 
-     <div className="" style={{color: "black", backgroundImage: `url("${attractions.imageUrl}")`}}>
+     <div className="container-fluid">
+     <div className="row">
+          {attractions.map((attraction) => {
+            return (
+              <div
+                className="col-md-6 col-sm-12"
+                key={attraction.id}
+                style={{
+                  backgroundImage: `url("${attraction.imageUrl}")`
+                }}
+              >
+                <AttractionCard
+                  id={attraction.id}
+                  category={attraction.category}
+                  date={attraction.date}
+                  title={attraction.title}
+                  snippet={attraction.snippet}
+                />
+              </div>
+            );
+          })}
+        </div>
+    
+
        <AttractionCard
         id={attractions.id}
         title={attractions.title}
