@@ -12,6 +12,7 @@ const Navbar = ({ handleLoginClick }) => {
   const api = "782a3ff54a8d337614b461d3cb2c5333";
   const q = "Cincinnati";
   
+  //change temp from float to int
   let shortTemp = String(temp);
 
   if(shortTemp.length > 2){
@@ -19,7 +20,6 @@ const Navbar = ({ handleLoginClick }) => {
     setTemp(shortTemp);
     
   }
-  console.log(shortTemp);
 
   
 useEffect(() => {
@@ -58,7 +58,7 @@ useEffect(() => {
       
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-weather">
           <li><img src={weatherIcon} alt=""/></li>
-          <li>{`It is ${temp} in Cincinnati`}</li>
+          <li>{`${temp}F in Cincinnati`}</li>
         </ul>
       </div>
 
