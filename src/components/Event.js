@@ -7,7 +7,7 @@ import Table from './table.js';
 const Event = () => {
 
     return (
-        <div className="container" id="container" >
+        <div className="container-fluid" id="container" >
 
             {/* container 1 - header events */}
 
@@ -20,7 +20,7 @@ const Event = () => {
 
             {/* container 2 - events */}
 
-            <div id="container-event" className="container">
+            <div id="container-event" className="container-fluid">
                 <Table />
             </div>
         </div>

@@ -1,11 +1,24 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 const LoginForm = ({ isShowLogin }) => {
+
+const [username, setUsername] = useState("");
+const [password, setPassword] = useState("");
+
+const onSubmit = (e) => {
+    const username = e.target.username;
+    const password = e.target.password;
+    
+
+}
+
+
     return (
         <div className={ `${!isShowLogin ? "active" : ""} show`} >
         <div className="login-form">
         <div className="form-box solid">
-        <form>
+        <form action="/" method="POST" onSubmit={onSubmit}>
             <h1 className="login-text"> sign In</h1>
             <label>Username</label><br /><br />
             <input type="text"

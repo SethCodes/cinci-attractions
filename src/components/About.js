@@ -24,7 +24,7 @@ const About = () => {
     const imageUrl1 = useWindowWidth() >= 650 ? Cont1_desk  : Cont1_mobile;
 
     return (
-        <div className="container" id="container" >
+        <div className="container-fluid" id="container" >
 
             {/* container 1 - about us */}
 

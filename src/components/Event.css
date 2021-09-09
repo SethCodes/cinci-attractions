@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
-.content1{
+.contentMain{
     text-align: center;
     padding-top: 4em !important;
     margin: 0 !important;
@@ -41,10 +41,8 @@ h3{
     background-color: rgb(27, 33, 39);
     padding: 2em;
 }
-/*table*/
-/* #outCont{
 
-} */
+/*table*/
 #title {
     padding: 0.5em 0 1em 0;
     text-align: center;
@@ -62,23 +60,17 @@ h3{
 #holidays td, #holidays th {
     border: 1px solid #ddd;
     padding: 8px;
-    
 }
 #holidays tr:nth-child(even){
-    /* background-color: #f2f2f2; */
     color: white;
-    
 }
 #holidays tr {
-    /* background-color: #ddd; */
     color: white;
-    
 }
 #holidays th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    /* background-color: #2bc6ff; */
     color: rgb(255, 255, 255);
 }
 td{

@@ -6,7 +6,7 @@
     padding: 0 !important;
 }
 .container-1, .container-2, .container-3 {
-    width: 120%;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,14 +20,14 @@
     display: flex;
 }
 .container-4{
-    width: 120%;
+    width: 100%;
     height: 150vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
 }
 .container-5 {
-    width: 120%;
+    width: 100%;
     height: 120vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,6 +64,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 20% 0 20%;
+    padding-top: 0 !important;
 }
 #content2{
     width: 100%;
@@ -136,6 +137,9 @@
     #content3 {
         align-items: center;
     }
+    .content1{
+        padding-top: 0 !important;
+    }
 }
 
 /* text in containers 1 to 5 */
@@ -181,13 +185,14 @@ i{
 }
 #team{
     margin-top: 5%;
+    width: 100%;
 }
+
+/* button */
 #buttonTeam{
     margin-top: 50px;
     text-align: center;
 }
-
-/* button */
 .button {
     display: inline-block;
     box-sizing: border-box;
@@ -296,26 +301,34 @@ i{
 .news{
     height: 100%;
 }
-
+#rowNews{
+    width: 100%;
+    margin: auto !important;
+}
                 /* make page responsive*/
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) {
     /*container 5*/
     .container-5 {
-        height: 140vh;
+        height: 135vh;
+    }
+    #rowNews{
+        margin-top: 3% !important;
     }
     .card{
         width:90%;
         height: 100%;
-    }
-    .container-5b{
-        margin: 2% 0 2% 2%;
+        text-align: center;
+        margin: auto !important
     }
 
     /*container 3*/
     #column{
         margin-bottom: 2%;
+        /* text-align: center;
+        align-content: center;
+        justify-content: center; */
     }
     #buttonTeam{
         margin-top: 3%;
@@ -326,7 +339,7 @@ i{
 @media (min-width: 768px) and (max-width: 991px) {
     /*container 5*/
     .container-5 {
-        height: 130vh;
+        height: 135vh;
     }
     .card{
         width:90%;
@@ -336,6 +349,9 @@ i{
     /*container 3*/
     .container-3{
         height: 95vh;
+    }
+    #buttonTeam{
+        margin-top: 3%;
     }
 }
 
@@ -376,13 +392,13 @@ i{
         height: 185vh;
     }
     #buttonTeam{
-        margin-top: 0px;
+        margin-top: 0;
         text-align: center;
     }
 
     /*container 5*/
     .container-5 {
-        height: 250vh;
+        height: 270vh;
     }
     #column{
         margin-bottom: 10px;
@@ -433,13 +449,13 @@ i{
         height: 300vh;
     }
     #buttonTeam{
-        margin-top: 0px;
+        margin-top: 12%;
         text-align: center;
     }
 
     /*container 5*/
     .container-5 {
-        height: 590vh;
+        height: 540vh;
     }
     .card{
         width:70%;
