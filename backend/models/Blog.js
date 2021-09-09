@@ -21,6 +21,10 @@ const blogSchema = new Schema({
      websiteUrl: {
          type: String,
          required: true
+     },
+     category: {
+         type: String,
+         required: true
      }
 
 }, {timestamps: true} );

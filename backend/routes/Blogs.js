@@ -14,6 +14,8 @@ router.route('/add').post((req, res) => {
     const imageUrl = req.body.imageUrl;
     const content = req.body.content;
     const websiteUrl = req.body.websiteUrl;
+    const category = req.body.category;
+
 
 
     const newBlog = new Blog({
@@ -21,7 +23,8 @@ router.route('/add').post((req, res) => {
         snippet: snippet,
         imageUrl: imageUrl,
         websiteUrl: websiteUrl,
-        content: content
+        content: content,
+        category: category
     });
 
     newBlog.save()
@@ -30,14 +33,49 @@ router.route('/add').post((req, res) => {
 
 });
 
+//category changes
 router.route('/parks').get((req, res) => {
-    Blog.find().findOne()
-    .then((blog) => {
-      const parks = res.json(blog);
-      if(parks)
-    })
+    Blog.find({category: "parks"})
+    .then((blog) => res.json(blog))
+      
     .catch(err => console.log(err));
 
-})
+});
+router.route('/food').get((req, res) => {
+    Blog.find({category: "food"})
+    .then((blog) => res.json(blog))
+      
+    .catch(err => console.log(err));
+
+});
+router.route('/activities').get((req, res) => {
+    Blog.find({category: "activity"})
+    .then((blog) => res.json(blog))
+      
+    .catch(err => console.log(err));
+
+});
+router.route('/night-life').get((req, res) => {
+    Blog.find({category: "night-life"})
+    .then((blog) => res.json(blog))
+      
+    .catch(err => console.log(err));
+
+});
+router.route('/transportation').get((req, res) => {
+    Blog.find({category: "transportation"})
+    .then((blog) => res.json(blog))
+      
+    .catch(err => console.log(err));
+
+});
+router.route('/art').get((req, res) => {
+    Blog.find({category: "art"})
+    .then((blog) => res.json(blog))
+      
+    .catch(err => console.log(err));
+
+});
+
 
 module.exports = router;
