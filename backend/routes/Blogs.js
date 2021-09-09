@@ -14,6 +14,7 @@ router.route('/add').post((req, res) => {
     const imageUrl = req.body.imageUrl;
     const content = req.body.content;
     const websiteUrl = req.body.websiteUrl;
+    const category = req.body.category;
 
 
     const newBlog = new Blog({
@@ -31,11 +32,8 @@ router.route('/add').post((req, res) => {
 });
 
 router.route('/parks').get((req, res) => {
-    Blog.find().findOne()
-    .then((blog) => {
-      const parks = res.json(blog);
-      if(parks)
-    })
+    Blog.find()
+    .then((blog) =>  res.json(blogs))
     .catch(err => console.log(err));
 
 })
