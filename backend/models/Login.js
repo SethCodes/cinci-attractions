@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.schema 
+const Schema = mongoose.Schema 
 
 
 
-const loginSchema = new  mongoose.schema({
+const loginSchema = new Schema({
     userName: {
         type: String,
         require: [true, 'please enter Username'],
@@ -18,4 +18,4 @@ const loginSchema = new  mongoose.schema({
 }, {timeStamps: true})
 
 const Login = mongoose.model('Login', loginSchema)
-model.export= Login;
+module.exports= Login;

@@ -1,28 +1,30 @@
 const router = require('express').Router();
-const Login = require('../models/Login');
+const Contact = require('../models/contact');
+
 
 
 router.route('/').get((req, res) => {
-    Login.find()
-    .then((Login) =>res.json(Login))
+    Contact.find()
+    .then((contact) => res.json(contact))
     .catch(err => console.log(err));
 });
 
 router.route('/add').post((req, res) =>{
-    const username = req.body.username
+    const email = req.body.email
     const password = req.body.password
 
 
-    const newLogin= new Login({
-        username: username,
+    const newContacts= new Contact({
+        email: email,
         password: password,
     });
 
-    newLogin.save()
+    newContacts.save()
     .then(() => res.json('Login add'))
     .catch(err => res.json(`Error: ${err}`));
 
 });
+
 
 
 module.exports = router;
