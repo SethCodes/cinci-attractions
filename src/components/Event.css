@@ -76,3 +76,17 @@ h3{
 td{
     text-align: center;
 }
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) {
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+/* Extra small devices (phones, 575px and down) */
+@media (max-width: 575px) {
+
+}
