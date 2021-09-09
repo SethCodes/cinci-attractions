@@ -17,7 +17,6 @@ router.route('/add').post((req, res) => {
     const category = req.body.category;
 
 
-
     const newBlog = new Blog({
         title: title,
         snippet: snippet,
