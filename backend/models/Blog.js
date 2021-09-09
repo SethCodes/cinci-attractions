@@ -13,6 +13,14 @@ const blogSchema = new Schema({
     content: {
          type: String,
          required: true
+     },
+     imageUrl: {
+         type: String,
+         required: true
+     },
+     websiteUrl: {
+         type: String,
+         required: true
      }
 
 }, {timestamps: true} );
