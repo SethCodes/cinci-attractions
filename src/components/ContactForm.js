@@ -2,9 +2,6 @@ import React, {useState, useEffect}from 'react'
 import BACKEND_URL from "../config";
 import axios from 'axios';
 
-
-    
-
 const ContactForm = () => {
 
     const [name, getName] = useState("");
@@ -24,7 +21,6 @@ const ContactForm = () => {
     const onChangeMessage = (e) => {
         getMessage(e.target.value);
     }
-    
     const onSubmit = (e) => {
         e.preventDefault();
     
@@ -35,12 +31,12 @@ const ContactForm = () => {
             message: message
         }
     
-       axios.get(BACKEND_URL +' /ContactForm/add', User)
+       axios.get(BACKEND_URL +'/ContactForm/add', User)
        .then(res => console.log(res.data))
        .catch(err => console.log(err));
     }
+
     return (
-        
         <div className="contact-form">
             <div className="form-box solid">
             <form action="/" method="POST" onSubmit={onSubmit}>
@@ -49,19 +45,19 @@ const ContactForm = () => {
                 <input type="text"
                 name="name"
                 className="contact-box"
-                onChange={onChangeName}
+                onChange={onChangeName} required
                 /> <br /><br />
                 <label>Email</label><br /><br />
                 <input type="text"
                 email="email"
                 className="contact-box"
-                onChange={onChangeEmail}
+                onChange={onChangeEmail} required
                 /> <br /><br />
                 <label>Subject</label><br /><br />
                 <input type="text"
                 name="subject"
                 className="contact-box"
-                onChange={onChangeSubject}
+                onChange={onChangeSubject} required
                 /> <br /><br />
                 <label>Message</label> <br /><br />
                 <input 
@@ -70,11 +66,10 @@ const ContactForm = () => {
                 className="contact-box"
                 onChange={onChangeMessage}
                 /> <br /><br />
-                <input type="submit" value="Contact" className="contact-btn" />
+                <input type="submit" value="Send" className="contact-btn" required/>
             </form>
             </div>
         </div>
-             
     );
 }
 

@@ -127,7 +127,7 @@ console.log(attractions);
           <img src={image4} className="sliderimg" alt="" />
         </AliceCarousel>
       </div>
-      <div className="">
+      <div className="popupContact">
         <ContactForm />
       </div>
 

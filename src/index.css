@@ -168,7 +168,7 @@ label {
   outline: none;
 }
 
-.login-btn{
+.login-btn {
   width: 75%;
   justify-content: center;
   align-items: center;
@@ -190,6 +190,46 @@ label {
   letter-spacing: 4px;
   background-color: #7FFFD4;
   color: #127ce6;
+}
+.contact-btn{
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48,172,251);
+  color: white;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.contact-btn:hover{
+  transform: scale(1.1);
+  letter-spacing: 1px;
+  background-color: #7FFFD4;
+  color: #127ce6;
+}
+.contact-form{
+  width: 60%;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  position:absolute;
+  /* z-index: 1; */
+}
+.popupContact{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.contact-box{
+  color: rgb(255, 255, 255) !important;
 }
 
 .show {
