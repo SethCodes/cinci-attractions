@@ -1,6 +1,5 @@
 import React, {useState, useEffect}from 'react'
 import BACKEND_URL from "../config";
-{/*import Signup from '../../backend/models';*/}
 import axios from 'axios';
 
 
@@ -19,7 +18,7 @@ const ContactForm = ({ isShowLogin }) => {
     const onSubmit = (e) => {
         e.preventDefault();
     
-        const newLogin = {
+        const newUser = {
             email: email,
             password: password
         }
@@ -28,7 +27,7 @@ const ContactForm = ({ isShowLogin }) => {
        .then(res => console.log(res.data))
        .catch(err => console.log(err));
 
-
+    }
 
 const ContactForm = () => {
     return (
