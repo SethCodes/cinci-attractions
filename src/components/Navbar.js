@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Navbar = ({ handleLoginClick }) => {
+const Navbar = ({ handleLoginClick, handleContactClick }) => {
   const [weather, setWeather] = useState("");
   const [temp, setTemp] = useState("");
   const [icon, setIcon] = useState("");
@@ -21,7 +21,6 @@ const Navbar = ({ handleLoginClick }) => {
     
   }
 
-  
 useEffect(() => {
 
   const getWeather = async () => {
@@ -32,16 +31,17 @@ useEffect(() => {
     setIcon(res.data.weather[0].icon);
     setTemp(res.data.main.temp);
 
-
   };
   getWeather();
-
-
 
 }, []);
 
   const handleClick = () => {
     handleLoginClick();
+  };
+
+  const handleClickB = () => {
+    handleContactClick();
   };
 
   const toggleClass = () => {
@@ -93,11 +93,11 @@ useEffect(() => {
                 Events
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link " aria-current="page" to="/blogs">
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link " aria-current="page" to="/about">
                 About
@@ -110,6 +110,15 @@ useEffect(() => {
                 onClick={handleClick}
               >
                 Sign In
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link contact"
+                aria-current="page"
+                onClick={handleClickB}
+              >
+                Contact us
               </a>
             </li>
           </ul>

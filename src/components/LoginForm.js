@@ -25,10 +25,8 @@ const onSubmit = (e) => {
    axios.get(BACKEND_URL +' /signup/add', newLogin)
    .then(res => console.log(res.data))
    .catch(err => console.log(err));
-    
 
 }
-
 
     return (
         <div className={ `${!isShowLogin ? "active" : ""} show`} >

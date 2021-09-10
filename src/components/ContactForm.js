@@ -2,7 +2,7 @@ import React, {useState, useEffect}from 'react'
 import BACKEND_URL from "../config";
 import axios from 'axios';
 
-const ContactForm = () => {
+const ContactForm = ({ isShowContact }) => {
 
     const [name, getName] = useState("");
     const [email, getEmail] = useState("");
@@ -37,6 +37,7 @@ const ContactForm = () => {
     }
 
     return (
+        <div className={ `${!isShowContact ? "active" : ""} show`} >
         <div className="contact-form">
             <div className="form-box solid">
             <form action="/" method="POST" onSubmit={onSubmit}>
@@ -69,6 +70,7 @@ const ContactForm = () => {
                 <input type="submit" value="Send" className="contact-btn" required/>
             </form>
             </div>
+        </div>
         </div>
     );
 }
