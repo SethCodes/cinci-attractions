@@ -189,7 +189,7 @@ i{
 }
 
 /* button */
-#buttonTeam{
+/* #buttonTeam{
     margin-top: 50px;
     text-align: center;
 }
@@ -219,7 +219,7 @@ i{
     text-decoration: none;
     padding: 0;
     margin: 0;
-  }
+  } */
   #content4 {
     height: 150px;
     display: flex;
@@ -330,9 +330,12 @@ i{
         align-content: center;
         justify-content: center; */
     }
-    #buttonTeam{
-        margin-top: 3%;
+    .container-3{
+        height: 95vh;
     }
+    /* #buttonTeam{
+        margin-top: 3%;
+    } */
 }
 
 /* Portrait tablets and small desktops */
@@ -348,7 +351,7 @@ i{
 
     /*container 3*/
     .container-3{
-        height: 95vh;
+        height: 85vh;
     }
     #buttonTeam{
         margin-top: 3%;
@@ -389,7 +392,7 @@ i{
         align-items: center;
     }
     .container-3{
-        height: 185vh;
+        height: 175vh;
     }
     #buttonTeam{
         margin-top: 0;
@@ -446,7 +449,7 @@ i{
         margin: 2% 0 4% 0;
     }
     .container-3{
-        height: 300vh;
+        height: 280vh;
     }
     #buttonTeam{
         margin-top: 12%;
