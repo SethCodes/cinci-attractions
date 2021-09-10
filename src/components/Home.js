@@ -11,6 +11,7 @@ import image4 from "../images/carousel14.jpg";
 import Image1 from "../media/image1.jpg";
 import Image2 from "../media/image2.jpg";
 import Image3 from "../media/image3.jpg";
+import ContactForm from "./ContactForm";
 
 const Home = () => {
 
@@ -125,6 +126,9 @@ console.log(attractions);
           <img src={image3} className="sliderimg" alt="" />
           <img src={image4} className="sliderimg" alt="" />
         </AliceCarousel>
+      </div>
+      <div className="">
+        <ContactForm />
       </div>
 
       <div className="categoryChoice text-center">
