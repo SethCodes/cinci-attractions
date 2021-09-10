@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import BACKEND_URL from "../config";
-{/*import Signup from '../../backend/models';*/}
 import axios from 'axios';
 
 const LoginForm = ({ isShowLogin }) => {
@@ -23,7 +22,7 @@ const onSubmit = (e) => {
         password: password
     }
 
-   axios.get(BACKEND_URL +' /signup/add', newUser)
+   axios.get(BACKEND_URL +' /signup/add', newLogin)
    .then(res => console.log(res.data))
    .catch(err => console.log(err));
     
