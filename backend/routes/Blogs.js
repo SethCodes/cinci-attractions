@@ -54,14 +54,14 @@ router.route('/activities').get((req, res) => {
     .catch(err => console.log(err));
 
 });
-router.route('/night-life').get((req, res) => {
+router.route('/nightlife').get((req, res) => {
     Blog.find({category: "night-life"})
     .then((blog) => res.json(blog))
       
     .catch(err => console.log(err));
 
 });
-router.route('/transportation').get((req, res) => {
+router.route('/transport').get((req, res) => {
     Blog.find({category: "transportation"})
     .then((blog) => res.json(blog))
       

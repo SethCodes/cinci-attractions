@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import BACKEND_URL from "../config";
-{/*import Signup from '../../backend/models';*/}
 import axios from 'axios';
 
 const LoginForm = ({ isShowLogin }) => {
