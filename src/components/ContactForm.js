@@ -31,7 +31,7 @@ const ContactForm = () => {
             message: message
         }
     
-       axios.get(BACKEND_URL +'/ContactForm/add', User)
+       axios.post(BACKEND_URL +'/Contact/add', User)
        .then(res => console.log(res.data))
        .catch(err => console.log(err));
     }

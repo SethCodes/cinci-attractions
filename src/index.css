@@ -55,10 +55,10 @@ p{
 .brand-logo{
   text-decoration: none;
 }
-.navbar-brand{
-  /* position: absolute; */
-  /* padding-right: 68px; */
-}
+/* .navbar-brand{
+  position: absolute; */
+  /* padding-right: 68px;
+} */
 .navbar button:focus{
   background-color: black;
 }
