@@ -138,7 +138,7 @@ console.log(attractions);
         </div>
         <div className="catOne">
           <i class="fas fa-star"></i>
-          <h1 onClick={categoryChange}>Activites</h1>
+          <h1 onClick={categoryChange}>Activities</h1>
         </div>
         <div className="catOne">
           <i class="fas fa-cocktail"></i>
@@ -176,41 +176,7 @@ console.log(attractions);
             );
           })}
         </div>
-    
-
-       <AttractionCard
-        id={attractions.id}
-        title={attractions.title}
-        snippet={attractions.snippet}
-        date={day}
-        category="Sports"
-        />
-
      </div>
-
-      <div className="container-fluid">
-        <div className="row">
-          {articles.map((attraction) => {
-            return (
-              <div
-                className="col-md-6 col-sm-12"
-                key={attraction.id}
-                style={{
-                  backgroundImage: `url("${attraction.backgroundImg}")`
-                }}
-              >
-                <AttractionCard
-                  id={attraction.id}
-                  category={attraction.category}
-                  date={attraction.date}
-                  title={attraction.title}
-                  snippet={attraction.snippet}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
     </div>
   );
 };
