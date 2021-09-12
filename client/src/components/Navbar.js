@@ -9,8 +9,6 @@ const Navbar = ({ handleLoginClick }) => {
   const [active, setactive] = useState(false);
 
   const weatherIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-  const api = "782a3ff54a8d337614b461d3cb2c5333";
-  const q = "Cincinnati";
   
   //change temp from float to int
   let shortTemp = String(temp);
@@ -25,7 +23,7 @@ const Navbar = ({ handleLoginClick }) => {
 useEffect(() => {
 
   const getWeather = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
+    const url = process.env.WEATHER_URI;
     const res = await axios.get(url);
     
     setWeather(res.data.weather[0].main);
