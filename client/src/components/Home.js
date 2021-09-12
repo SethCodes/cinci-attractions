@@ -53,7 +53,7 @@ const Home = () => {
           <img src={image4} className="sliderimg" alt="" />
         </AliceCarousel>
       </div>
-
+{/* comment */}
       <div className="categoryChoice text-center">
         <div className="catOne">
           <i class="fas fa-parking"></i>
