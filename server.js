@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Blog = require("./models/Blog");
+// const Blog = require("./models/Blog");
 
 require('dotenv').config();
 
@@ -33,7 +33,7 @@ app.use('/contact', contactsRoutes)
 
 
 //db connection
-mongoose.connect(process.env.ATLAS_URI, {useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(port, 'localhost', () => {
   console.log('listening for request on port 5000');
 }))
