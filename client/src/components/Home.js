@@ -15,102 +15,29 @@ import Image3 from "../media/image3.jpg";
 const Home = () => {
 
   //initial state
-  const [attractions, setattractions] = useState([]);
-  const [titleOne, setTitleOne] = useState('');
+  const [attractions, setAttractions] = useState([]);
   const [category, setCategory] = useState("park");
-console.log(attractions);
 
   
   //get year for articles
   const date = new Date();
   const day = date.getFullYear();
 
-  const articles = [
-    {
-      id: 1,
-      backgroundImg: Image1,
-      category: "Sports",
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 2,
-      backgroundImg: Image2,
-      category: "Sports",
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 3,
-      category: "Sports",
-      backgroundImg: Image3,
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 4,
-      backgroundImg: Image1,
-      category: "Sports",
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 5,
-      backgroundImg: Image2,
-      category: "Sports",
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 6,
-      category: "Sports",
-      backgroundImg: Image3,
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 7,
-      category: "Sports",
-      backgroundImg: Image3,
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    },
-    {
-      id: 8,
-      category: "Sports",
-      backgroundImg: Image3,
-      date: day,
-      title: "Big Bad Ball",
-      snippet:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor saepe quasi eaque tempora sint "
-    }
-  ];
 
-
+//update attractions on load and category change
   useEffect(() => {
     const getArticles = async () => {
       const res = await axios.get(BACKEND_URL + "/blogs/" + category );
-      setattractions(res.data);
+      console.log(res);
+      setAttractions(res.data);
 
     };
     getArticles();
+    console.log(attractions);
 
   }, [category]);
 
+  //change category
   const categoryChange = (e) => {
     e.preventDefault();
     setCategory(e.target.innerHTML);
