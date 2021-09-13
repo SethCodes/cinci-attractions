@@ -156,7 +156,7 @@ console.log(attractions);
       </div>
 
      <div className="container-fluid">
-     <div className="row">
+     <div className="row" id="attractRow">
           {attractions.map((attraction) => {
             return (
               <div
@@ -165,6 +165,7 @@ console.log(attractions);
                 style={{
                   backgroundImage: `url("${attraction.imageUrl}")`
                 }}
+                id="attractImage"
               >
                 <AttractionCard
                   id={attraction.id}
