@@ -37,10 +37,9 @@ p{
 }
 
 .carouselDown{
-  z-index: 0;
+  z-index: -2;
   position: relative;
   top: 0.9px;
-  z-index: 0;
 }
 /* .navbar {
   position: absolute;
@@ -50,16 +49,46 @@ p{
   left: 0px;
   top: 0px;
 } */
+.navbar{
+  padding: 0 20px 10px;
+}
 .brand-logo{
   text-decoration: none;
 }
-.nav-wrapper{
-align-items: center;}
-.navbar-toggler{
-  align-items: center;
-  float: right;
-  color: white;
+/* .navbar-brand{
+  position: absolute; */
+  /* padding-right: 68px;
+} */
+.navbar button:focus{
+  background-color: black;
 }
+.navbar-weather{
+  position: absolute;
+  top: 60px;
+  left: 10px;
+
+  display: flex;
+
+}
+.navbar-weather img{
+  height: 50px;
+}
+
+
+.nav-wrapper{
+align-items: center;
+}
+.nav-item{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.nav-link{
+  padding-bottom: 0;
+  z-index: 5;
+  
+}
+
 
 .loginicon {
   position: absolute;
@@ -139,7 +168,7 @@ label {
   outline: none;
 }
 
-.login-btn{
+.login-btn {
   width: 75%;
   justify-content: center;
   align-items: center;
@@ -162,11 +191,54 @@ label {
   background-color: #7FFFD4;
   color: #127ce6;
 }
+.contact-btn{
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48,172,251);
+  color: white;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.contact-btn:hover{
+  transform: scale(1.1);
+  letter-spacing: 1px;
+  background-color: #7FFFD4;
+  color: #127ce6;
+}
+.contact-form{
+  width: 60%;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  position:absolute;
+  /* z-index: 1; */
+}
+.popupContact{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.contact-box{
+  color: rgb(255, 255, 255) !important;
+}
 
 .show {
   display: block;
   transition: 800ms;
   opacity: 1;
+}
+.container-fluid{
+  padding: 0;
 }
 
 .show.active {
@@ -207,3 +279,20 @@ i.fas {
  
 }
 
+<<<<<<< HEAD
+=======
+
+/* medium screen size */
+@media only screen and (max-width: 991px) {
+  .nav-link{
+    border-bottom: 1px solid red;
+  }
+  .navbar-weather{
+    display: none;
+  }
+  .nav-link{
+    font-weight: 700;
+  font-size: 1.5rem;
+  }
+}
+>>>>>>> d29df1f20b7f55873558f78b7b18de1674a6cf0c
