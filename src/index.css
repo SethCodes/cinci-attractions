@@ -300,11 +300,6 @@ padding: 0.4em 0.4em;
   background-size: cover;
   background-repeat: no-repeat;
 }
-h1:hover {
-  cursor: pointer;
-  color: #127ce6;
-  text-shadow: 2px 2px;
-}
 
 /*Navbar - on hover & active tab*/
 .nav-link:hover {
@@ -312,6 +307,6 @@ h1:hover {
 }
 .nav-link--active {
   font-weight:bolder !important;
-  color: #29b6f6 !important;
+  color: #127ce6 !important;
   transition: border-bottom .5s ease-in-out;
 }
