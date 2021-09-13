@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     padding: 40px 0 0 0;
-    display: inline-block;
+    display: block;
 }
 .container-2, .container-4{
     background-color: rgb(48, 57, 66);
@@ -91,7 +91,6 @@
     width: 70%;
     height: 25%;
     overflow: hidden;
-    /* object-fit: contain; */
 }
 #img1, #img2{
     width: 50%;
@@ -180,47 +179,13 @@ i{
     width: 50px;
 }
 #teaMember{
-    /* width: 100%; */
     padding: 0;
 }
 #team{
     margin-top: 5%;
     width: 100%;
 }
-
-/* button */
-/* #buttonTeam{
-    margin-top: 50px;
-    text-align: center;
-}
-.button {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 9em;
-    height: auto;
-    margin: 0px 0px 0px 0px;
-    padding: 6px 0px 6px 0px;
-    background: rgba(155, 155, 155, 0.3);
-    border-radius: 25px;
-    border-style: none;
-    box-shadow:  0px 0px 5px 3px rgba(0, 0, 0, 0.03);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .button .part-text .label {
-    box-sizing: border-box;
-    font-family: ui-monospace;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 153%;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    letter-spacing: -0.01em;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-  } */
-  #content4 {
+#content4 {
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -286,17 +251,16 @@ i{
 
             /* local news API - container 5 */
 
-.card{
+.card {
     width: 100%;
     height: 18em;
+    overflow: hidden;
 }
 .card-body{
     background-color: rgb(22, 123, 163);
-    /* height: 200%; */
 }
 .card-title{
     font-size: 15px !important;
-    /* height: 100%; */
 }
 .news{
     height: 100%;
@@ -304,6 +268,16 @@ i{
 #rowNews{
     width: 100%;
     margin: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-5b {
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-fluid {
+    max-width: auto;
+    max-height: 65%;
 }
                 /* make page responsive*/
 
@@ -311,30 +285,26 @@ i{
 @media (min-width: 992px) {
     /*container 5*/
     .container-5 {
-        height: 135vh;
+        height: 140vh;
     }
     #rowNews{
         margin-top: 3% !important;
-    }
-    .card{
-        width:90%;
         height: 100%;
+    }
+    .card {
+        width:90%;
+        /* height: 100%; */
         text-align: center;
         margin: auto !important
     }
-
-    /*container 3*/
     #column{
         margin-bottom: 2%;
-        /* text-align: center;
-        align-content: center;
-        justify-content: center; */
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
-    .container-3{
-        height: 95vh;
-    }
-    /* #buttonTeam{
-        margin-top: 3%;
+    /* .img-fluid {
+        max-width: auto;
+        max-height: 65%;
     } */
 }
 
@@ -342,16 +312,27 @@ i{
 @media (min-width: 768px) and (max-width: 991px) {
     /*container 5*/
     .container-5 {
-        height: 135vh;
+        height: 140vh;
     }
-    .card{
+    #rowNews{
+        margin-top: 3% !important;
+        /* height: 100%; */
+    }
+    .card {
         width:90%;
-        margin: 5% 5% 5% 5%;
+        /* height: 100%; */
+        text-align: center;
+        margin: 5% 0 0 5%;
+    }
+    #column{
+        margin-bottom: 2%;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
 
     /*container 3*/
     .container-3{
-        height: 85vh;
+        height: 95vh;
     }
     #buttonTeam{
         margin-top: 3%;
@@ -392,16 +373,12 @@ i{
         align-items: center;
     }
     .container-3{
-        height: 175vh;
-    }
-    #buttonTeam{
-        margin-top: 0;
-        text-align: center;
+        height: 185vh;
     }
 
     /*container 5*/
     .container-5 {
-        height: 270vh;
+        height: 245vh;
     }
     #column{
         margin-bottom: 10px;
@@ -409,9 +386,9 @@ i{
         display: flex;
         justify-content: center;
     }
-    .card{
+    .card {
         width:90%;
-        height: 100%;
+        /* height: 100%; */
     }
 }
 
@@ -421,7 +398,6 @@ i{
     #teaMember{
         padding: 0;
         display: block;
-        /* vertical-align: middle; */
     }
     #teamPic{
         vertical-align: middle;
@@ -449,20 +425,16 @@ i{
         margin: 2% 0 4% 0;
     }
     .container-3{
-        height: 280vh;
-    }
-    #buttonTeam{
-        margin-top: 12%;
-        text-align: center;
+        height: 300vh;
     }
 
     /*container 5*/
     .container-5 {
-        height: 540vh;
+        height: 480vh;
     }
-    .card{
+    .card {
         width:70%;
-        height: 100%;
+        /* height: 100%; */
     }
     #column{
         margin-bottom: 10px;

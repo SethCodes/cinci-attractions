@@ -29,7 +29,7 @@ class Headlines extends Component {
     }
  
     render() {
-        return <div id="rowNews" className="row">{this.renderItems()}</div>;
+        return <div id="rowNews" className="row d-flex">{this.renderItems()}</div>;
     }
 }
  
