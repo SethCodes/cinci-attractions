@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import WEATHER_API from '../api/weatherApi';
+
+
 
 const Navbar = ({ handleLoginClick }) => {
   const [weather, setWeather] = useState("");
   const [temp, setTemp] = useState("");
   const [icon, setIcon] = useState("");
   const [active, setactive] = useState(false);
+
+
+
 
   const weatherIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   
@@ -19,13 +25,12 @@ const Navbar = ({ handleLoginClick }) => {
     
   }
 
-  
+  // const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=${WEATHER_API}&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
 useEffect(() => {
-
   const getWeather = async () => {
-    const url = process.env.WEATHER_URI;
     const res = await axios.get(url);
-    
+    console.log(res);
     setWeather(res.data.weather[0].main);
     setIcon(res.data.weather[0].icon);
     setTemp(res.data.main.temp);
@@ -33,10 +38,10 @@ useEffect(() => {
 
   };
   getWeather();
+console.log(weather)
 
 
-
-}, []);
+}, [weather]);
 
   const handleClick = () => {
     handleLoginClick();
