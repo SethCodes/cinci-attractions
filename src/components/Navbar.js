@@ -18,22 +18,18 @@ const Navbar = ({ handleLoginClick, handleContactClick }) => {
   if(shortTemp.length > 2){
     shortTemp = shortTemp.substring(0,2);
     setTemp(shortTemp);
-    
   }
 
-useEffect(() => {
-
-  const getWeather = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
-    const res = await axios.get(url);
+  useEffect(() => {
+    const getWeather = async () => {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
+      const res = await axios.get(url);
     
-    setWeather(res.data.weather[0].main);
-    setIcon(res.data.weather[0].icon);
-    setTemp(res.data.main.temp);
-
+      setWeather(res.data.weather[0].main);
+      setIcon(res.data.weather[0].icon);
+      setTemp(res.data.main.temp);
   };
   getWeather();
-
 }, []);
 
   const handleClick = () => {
@@ -53,21 +49,18 @@ useEffect(() => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
 
-      {/* weather */}
-      <div id="navbar-weather">
-      
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-weather">
-          <li><img src={weatherIcon} alt=""/></li>
-          <li>{`${temp}F in Cincinnati`}</li>
-        </ul>
-      </div>
+        {/* weather */}
+        <div id="navbar-weather">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-weather">
+            <li><img src={weatherIcon} alt=""/></li>
+            <li>{`${temp}F in Cincinnati`}</li>
+          </ul>
+        </div>
 
-      {/* logo / title */}
-      
-      <a className="navbar-brand" href="/">
-          Cincinnati Attractions
+        {/* logo / title */}
+        <a className="navbar-brand" href="/">
+            Cincinnati Attractions
         </a>
-
 
         {/* nav toggler button */}
         <button
@@ -93,11 +86,6 @@ useEffect(() => {
                 Events
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/blogs">
-                Blog
-              </Link>
-            </li> */}
             <li className="nav-item">
               <Link className="nav-link " aria-current="page" to="/about">
                 About
@@ -118,7 +106,7 @@ useEffect(() => {
                 aria-current="page"
                 onClick={handleClickB}
               >
-                Contact us
+                Contact
               </a>
             </li>
           </ul>

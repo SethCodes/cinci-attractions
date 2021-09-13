@@ -39,28 +39,28 @@ const ContactForm = ({ isShowContact }) => {
     return (
         <div className={ `${!isShowContact ? "active" : ""} show`} >
         <div className="contact-form">
-            <div className="form-box solid">
+            <div className="form-box-2 solid">
             <form action="/" method="POST" onSubmit={onSubmit}>
                 <h1 className="contact-text"> Contact us</h1>
-                <label>Name</label><br /><br />
+                <label>Name</label>
                 <input type="text"
                 name="name"
                 className="contact-box"
                 onChange={onChangeName} required
                 /> <br /><br />
-                <label>Email</label><br /><br />
+                <label>Email</label>
                 <input type="text"
                 email="email"
                 className="contact-box"
                 onChange={onChangeEmail} required
                 /> <br /><br />
-                <label>Subject</label><br /><br />
+                <label>Subject</label>
                 <input type="text"
                 name="subject"
                 className="contact-box"
                 onChange={onChangeSubject} required
                 /> <br /><br />
-                <label>Message</label> <br /><br />
+                <label>Message</label>
                 <input 
                 type="text"
                 name="message"

@@ -26,14 +26,11 @@ const App = () => {
         <div className="App">
           <Navbar handleLoginClick={handleLoginCLick} handleContactClick={handleContactCLick} />
           <LoginForm isShowLogin={isShowLogin} />
-          {/* <div className="popupContact"> */}
           <ContactForm isShowContact={isShowContact}/>
-          {/* </div> */}
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/Event' component={Event}/>
-          {/* <Route path='/Blog' component={Blog}/> */}
           </Switch>
           <Footer />  
         </div>
