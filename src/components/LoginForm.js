@@ -25,24 +25,24 @@ const onSubmit = (e) => {
    axios.get(BACKEND_URL +' /signup/add', newLogin)
    .then(res => console.log(res.data))
    .catch(err => console.log(err));
-    
 
 }
-
 
     return (
         <div className={ `${!isShowLogin ? "active" : ""} show`} >
         <div className="login-form">
         <div className="form-box solid">
         <form action="/" method="POST" onSubmit={onSubmit}>
-            <h1 className="login-text"> sign In</h1>
-            <label>Username</label><br /><br />
+            <h1 className="login-text"> Sign In</h1>
+            <br />
+            <label>Username</label>
             <input type="text"
             name="username"
             className="login-box"
             onChange={onChangeName}
-            /> <br /><br />
-            <label>Password</label> <br /><br />
+            />
+            <br />
+            <label>Password</label>
             <input 
             type="password"
             name="password"

@@ -55,10 +55,10 @@ p{
 .brand-logo{
   text-decoration: none;
 }
-.navbar-brand{
-  /* position: absolute; */
-  /* padding-right: 68px; */
-}
+/* .navbar-brand{
+  position: absolute; */
+  /* padding-right: 68px;
+} */
 .navbar button:focus{
   background-color: black;
 }
@@ -66,14 +66,12 @@ p{
   position: absolute;
   top: 60px;
   left: 10px;
-
   display: flex;
 
 }
 .navbar-weather img{
   height: 50px;
 }
-
 
 .nav-wrapper{
 align-items: center;
@@ -86,9 +84,7 @@ align-items: center;
 .nav-link{
   padding-bottom: 0;
   z-index: 5;
-  
 }
-
 
 .loginicon {
   position: absolute;
@@ -111,18 +107,19 @@ align-items: center;
   color: white;
 }
 
-.login-form{
+.login-form {
   width: 100%;
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 20vh;
   position:absolute;
-  z-index: 1;
+  margin: auto;
 }
 
 .form-box{
-  margin-top: 7vh;
+  margin-top: 10vh;
   opacity:80%;
   background: black;
   padding-right: 80px;
@@ -132,17 +129,12 @@ align-items: center;
 }
 
 .login-text{
-  width: 100%;
-  color: white;
-  border-bottom: 2px solid white;
   line-height: 30px;
-  width: 100%;
   font-weight: bolder;
-  text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 5vh;
+  text-decoration: underline;
 }
 
 label {
@@ -151,7 +143,7 @@ label {
   text-align: center;
 }
 
-.login-box{
+.login-box {
   border: 1px solid lightgrey;
   display: flex;
   justify-content: center;
@@ -168,7 +160,7 @@ label {
   outline: none;
 }
 
-.login-btn{
+.login-btn {
   width: 75%;
   justify-content: center;
   align-items: center;
@@ -185,11 +177,61 @@ label {
   margin-bottom: 20px;
 }
 
-.login-btn:hover{
-  transform: scale(1.03);
-  letter-spacing: 4px;
+.login-btn:hover {
+  transform: scale(1.1);
+  letter-spacing: 0.2px;
   background-color: #7FFFD4;
   color: #127ce6;
+}
+.contact-btn {
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48,172,251);
+  color: white;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.contact-btn:hover {
+  transform: scale(1.1);
+  letter-spacing: 1px;
+  background-color: #7FFFD4;
+  color: #127ce6;
+}
+.contact-form {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 90vh; */
+  position:absolute;
+  margin: 2vh auto 0 auto;
+}
+.contact-box {
+  color: rgb(255, 255, 255) !important;
+}
+.contact-text {
+  text-decoration: underline;
+  margin-top: 4vh;
+}
+.form-box-2{
+  margin-top: 2vh;
+  width: 40%;
+  height: 100%;
+  opacity:80%;
+  background: black;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 .show {
@@ -197,7 +239,7 @@ label {
   transition: 800ms;
   opacity: 1;
 }
-.container-fluid{
+.container-fluid {
   padding: 0;
 }
 
@@ -205,8 +247,7 @@ label {
   transform: translateY(100px) scale(0) rotateY(180deg);
   opacity: 0;
 }
-.categoryChoice{
-  
+.categoryChoice {
   font-size: 2rem;
   padding: 15px 15px;
   list-style: none;
@@ -218,27 +259,23 @@ label {
   justify-content: space-evenly;
   column-count: 6;
   column-gap: 8px;
- 
- }
+}
 
 .catOne {
   display: flex;
   /* display:block; */
   flex-direction: column;
   align-items: center;
- 
 }
 .catOneicon { 
 max-width: 60px;
 }
 i.fas {
-  display: inline-block;
-  border-radius: 100px;
-  box-shadow: 3px 3px 5px rgb(0, 0, 0);
-  padding: 0.4em 0.4em;
- 
+display: inline-block;
+border-radius: 100px;
+box-shadow: 3px 3px 5px rgb(0, 0, 0);
+padding: 0.4em 0.4em;
 }
-
 
 /* medium screen size */
 @media only screen and (max-width: 991px) {
@@ -253,3 +290,4 @@ i.fas {
   font-size: 1.5rem;
   }
 }
+
