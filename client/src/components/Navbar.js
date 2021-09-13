@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import WEATHER_API from '../api/weatherApi';
+import dotenv from 'dotenv';
 
 
 
@@ -11,6 +11,7 @@ const Navbar = ({ handleLoginClick }) => {
   const [icon, setIcon] = useState("");
   const [active, setactive] = useState(false);
 
+dotenv.config();
 
 
 
@@ -25,7 +26,7 @@ const Navbar = ({ handleLoginClick }) => {
     
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=${WEATHER_API}&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=${process.env.WEATHER_API}&units=imperial`;
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
 useEffect(() => {
   const getWeather = async () => {
