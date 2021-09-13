@@ -40,7 +40,7 @@ const ContactForm = () => {
        .catch(err => console.log(err));
     }
     return (
-        
+         
         <div className="contact-form">
             <div className="form-box solid">
             <form action="/" method="POST" onSubmit={onSubmit}>
@@ -74,8 +74,12 @@ const ContactForm = () => {
             </form>
             </div>
         </div>
-             
+              
+       
+       
+       
+      
+       
     );
 }
-
 export default ContactForm;
