@@ -279,8 +279,6 @@ i.fas {
  
 }
 
-<<<<<<< HEAD
-=======
 
 /* medium screen size */
 @media only screen and (max-width: 991px) {
@@ -295,4 +293,3 @@ i.fas {
   font-size: 1.5rem;
   }
 }
->>>>>>> d29df1f20b7f55873558f78b7b18de1674a6cf0c
