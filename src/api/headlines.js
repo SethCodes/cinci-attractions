@@ -3,6 +3,7 @@ import SingleHeadline from "./singleHeadline";
 import axios from 'axios';
  
 class Headlines extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +12,7 @@ class Headlines extends Component {
     }
  
     componentDidMount() {
-        const apiUrl =
+        const apiUrl = process.env.HEADLINES_URI || 
             "https://newsapi.org/v2/everything?q=cincinnati&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
         axios.get(apiUrl)
             .then((response) => {
