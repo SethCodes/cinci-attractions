@@ -8,12 +8,15 @@ const loginSchema = new Schema({
         type: String,
         require: [true, 'please enter Username'],
         unique: true,
-        lowercase: true,
+        trim: true,
+        minLength: (4, 'Minimum lenth is 4 characters'),
     },
     password:{
      type: String,
     require: [true, 'Please enter password'],
-    minLength: [6, 'Minium length is 6 characters']
+    unique: true,
+    minLength: [6, 'Minium length is 6 characters'], 
+    
 }
 }, {timeStamps: true})
 
