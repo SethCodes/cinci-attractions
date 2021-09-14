@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import axios from "axios";
 
 const Navbar = ({ handleLoginClick, handleContactClick }) => {
@@ -77,19 +77,19 @@ const Navbar = ({ handleLoginClick, handleContactClick }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <NavLink className="nav-link" exact activeClassName="nav-link--active" aria-current="page" to="/">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/event">
+              <NavLink className="nav-link" activeClassName="nav-link--active" aria-current="page" to="/event">
                 Events
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/about">
+              <NavLink className="nav-link" activeClassName="nav-link--active" aria-current="page" to="/about">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
               <a
