@@ -17,7 +17,6 @@ const Home = () => {
   //initial state
   const [attractions, setAttractions] = useState([]);
   const [category, setCategory] = useState("park");
-console.log("backend url is: " + BACKEND_URL);
 
   
   //get year for articles
@@ -29,12 +28,10 @@ console.log("backend url is: " + BACKEND_URL);
   useEffect(() => {
     const getArticles = async () => {
       const res = await axios.get(BACKEND_URL + "/blogs/" + category );
-      console.log(res);
       setAttractions(res.data);
 
     };
     getArticles();
-    console.log(attractions);
 
   }, [category]);
 
