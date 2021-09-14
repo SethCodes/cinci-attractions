@@ -3,6 +3,7 @@ import SingleHeadline from "./singleHeadline";
 import axios from 'axios';
  
 class Headlines extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
