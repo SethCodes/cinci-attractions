@@ -12,8 +12,6 @@ const dbURI = process.env.ATLAS_URI;
 const blogRoutes = require('./routes/Blogs');
 const loginRoutes = require('./routes/login');
 const contactsRoutes = require('./routes/contacts');
-const weatherRoutes = require('./routes/weatherRoute');
-
 
 //middleware
 app.use(cors());
@@ -21,7 +19,6 @@ app.use(express.json());
 app.use('/blogs', blogRoutes);
 app.use('/login', loginRoutes);
 app.use('/contact', contactsRoutes);
-app.use('/api', weatherRoutes);
 
 
 // static files for heroku
@@ -39,23 +36,5 @@ mongoose
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
-
-
-// const url = process.env.WEATHER_API;
-
-
-// const request = require('request');
-
-// request(url, (err, res, body)=> {
-
-//   if(err){
-//     console.log(err);
-//   } else {
-//     const data = JSON.parse(body);
-//     console.log(data);
-
-    
-//   }
-// });
 
 
