@@ -11,11 +11,13 @@ import image4 from "../images/carousel14.jpg";
 import Image1 from "../media/image1.jpg";
 import Image2 from "../media/image2.jpg";
 import Image3 from "../media/image3.jpg";
+import ContactForm from "./ContactForm";
 
 const Home = () => {
 
   //initial state
-  const [attractions, setAttractions] = useState([]);
+  const [attractions, setattractions] = useState([]);
+  const [titleOne, setTitleOne] = useState('');
   const [category, setCategory] = useState("park");
 
   
@@ -23,8 +25,9 @@ const Home = () => {
   const date = new Date();
   const day = date.getFullYear();
 
+ 
 
-//update attractions on load and category change
+
   useEffect(() => {
     const getArticles = async () => {
       const res = await axios.get(BACKEND_URL + "/blogs/" + category );
@@ -35,7 +38,6 @@ const Home = () => {
 
   }, [category]);
 
-  //change category
   const categoryChange = (e) => {
     e.preventDefault();
     setCategory(e.target.innerHTML);
@@ -44,14 +46,14 @@ const Home = () => {
   return (
     <div className="container-fluid">
       <div className="carouselDown">
-        <AliceCarousel autoPlay autoPlayInterval="3000">
+        <AliceCarousel autoPlay autoPlayInterval="3000" infinite="true">
           <img src={images} className="sliderimg" alt="" />
           <img src={image2} className="sliderimg" alt="" />
           <img src={image3} className="sliderimg" alt="" />
           <img src={image4} className="sliderimg" alt="" />
         </AliceCarousel>
       </div>
-{/* comment */}
+
       <div className="categoryChoice text-center">
         <div className="catOne">
           <i class="fas fa-parking"></i>

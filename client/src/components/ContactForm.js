@@ -2,72 +2,82 @@ import React, {useState, useEffect}from 'react'
 import BACKEND_URL from "../config";
 import axios from 'axios';
 
+const ContactForm = ({ isShowContact }) => {
 
-const ContactForm = ({ isShowLogin }) => {
-    console.log(BACKEND_URL);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [name, getName] = useState("");
+    const [email, getEmail] = useState("");
+    const [subject, getSubject] = useState("");
+    const [message, getMessage] = useState("");
     
     const onChangeName = (e) => {
-        setUsername(e.target.value);
+        getName(e.target.value);
     }
-    const onChangePass = (e) => {
-        setPassword(e.target.value);
+    const onChangeEmail = (e) => {
+        getEmail(e.target.value);
     }
-    
+    const onChangeSubject = (e) => {
+        getSubject(e.target.value);
+    }
+    const onChangeMessage = (e) => {
+        getMessage(e.target.value);
+    }
     const onSubmit = (e) => {
         e.preventDefault();
     
-        const newUser = {
+        const User = {
+            name: name,
             email: email,
-            password: password
+            subject: subject,
+            message: message
         }
     
-       axios.get(BACKEND_URL +' /ContactForm/add', newUser)
+       axios.post(BACKEND_URL +'/Contact/add', User)
        .then(res => console.log(res.data))
        .catch(err => console.log(err));
-
     }
 
-const ContactForm = () => {
     return (
-        <div className={ `${!isShowLogin ? "active" : ""} show`} >
-        <div className="login-form">
-        <div className="form-box solid">
-        <form action="/" method="POST" onSubmit={onSubmit}>
-            <h1 className="login-text"> sign In</h1>
-            <label>Email</label><br /><br />
-            <input type="text"
-            name="username"
-            className="login-box"
-            onChange={onChangeName}
-            /> <br /><br />
-            <label>Password</label> <br /><br />
-            <input 
-            type="password"
-            name="password"
-            className="login-box"
-            onChange={onChangePass}
-             /> <br /><br />
-             <input type="submit" value="Login" className="login-btn" />
-             <input type="submit" value="Create Account" className="login-btn" />
-             </form>
-             </div>
-              </div>
-             </div>
+        <div className={ `${!isShowContact ? "active" : ""} show`} >
+        <div className="contact-form">
+            <div className="form-box-2 solid">
+            <form action="/" method="POST" onSubmit={onSubmit}>
+                <h1 className="contact-text"> Contact us</h1>
+                <label>Name</label>
+                <input type="text"
+                name="name"
+                className="contact-box"
+                onChange={onChangeName} required
+                /> <br /><br />
+                <label>Email</label>
+                <input type="text"
+                email="email"
+                className="contact-box"
+                onChange={onChangeEmail} required
+                /> <br /><br />
+                <label>Subject</label>
+                <input type="text"
+                name="subject"
+                className="contact-box"
+                onChange={onChangeSubject} required
+                /> <br /><br />
+                <label>Message</label>
+                <input 
+                type="text"
+                name="message"
+                className="contact-box"
+                onChange={onChangeMessage}
+                /> <br /><br />
+                <input type="submit" value="Send" className="contact-btn" required/>
+            </form>
+            </div>
+        </div>
+              
+       
+       
+       
+      
+       
+        </div>
     );
 }
-    
-
-
 export default ContactForm;
-
-
-
-
-
-
-
-
-
-

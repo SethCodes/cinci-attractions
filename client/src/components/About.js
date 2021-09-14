@@ -91,13 +91,13 @@ const About = () => {
                         <a target="blank" href="https://github.com/kushalpatel42" id="piCont"><i id="teamSocial" class="fab fa-github fa-2x"></i></a>
                     </div>
                 </div>
-                <div id="buttonTeam">
+                {/* <div id="buttonTeam">
                     <a href="#" class="button">
 		                <div class="part-text">
 			                <span class="label">View the team</span>
 		                </div>
                     </a>
-                </div>
+                </div> */}
             </div>
 
             {/* container 4 - our top picks */}

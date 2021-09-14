@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import axios from "axios";
+<<<<<<< HEAD
 
+=======
+>>>>>>> f6efa244d151903b4f4fee2a051fe3242f1ee4a2
 
-
-
-const Navbar = ({ handleLoginClick }) => {
+const Navbar = ({ handleLoginClick, handleContactClick }) => {
   const [weather, setWeather] = useState("");
   const [temp, setTemp] = useState("");
   const [icon, setIcon] = useState("");
   const [active, setactive] = useState(false);
 
   const weatherIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+<<<<<<< HEAD
 
+=======
+  
+  
+>>>>>>> f6efa244d151903b4f4fee2a051fe3242f1ee4a2
   //change temp from float to int
   let shortTemp = String(temp);
 
@@ -20,6 +26,7 @@ const Navbar = ({ handleLoginClick }) => {
     shortTemp = shortTemp.substring(0, 2);
     setTemp(shortTemp);
   }
+<<<<<<< HEAD
   
 
 
@@ -46,15 +53,40 @@ const Navbar = ({ handleLoginClick }) => {
 
 //   }, [])
   
+=======
+
+  useEffect(() => {
+    const getWeather = async () => {
+      const url = process.env.REACT_APP_WEATHER_API;
+      const res = await axios.get(url);
+    
+      setWeather(res.data.weather[0].main);
+      setIcon(res.data.weather[0].icon);
+      setTemp(res.data.main.temp);
+  };
+  getWeather();
+}, []);
+>>>>>>> f6efa244d151903b4f4fee2a051fe3242f1ee4a2
 
   const handleClick = () => {
     handleLoginClick();
   };
 
+<<<<<<< HEAD
   // const toggleClass = () => {
   //   const currentState = active;
   //   setactive(!active);
   // };
+=======
+  const handleClickB = () => {
+    handleContactClick();
+  };
+
+  const toggleClass = () => {
+    const currentState = active;
+    setactive(!active);
+  };
+>>>>>>> f6efa244d151903b4f4fee2a051fe3242f1ee4a2
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -69,10 +101,24 @@ const Navbar = ({ handleLoginClick }) => {
           </ul>
         </div>
 
+<<<<<<< HEAD
         {/* logo / title */}
 
         <a className="navbar-brand" href="/">
           Cincinnati Attractions
+=======
+        {/* weather */}
+        <div id="navbar-weather">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-weather">
+            <li><img src={weatherIcon} alt=""/></li>
+            <li>{`${temp}F in Cincinnati`}</li>
+          </ul>
+        </div>
+
+        {/* logo / title */}
+        <a className="navbar-brand" href="/">
+            Cincinnati Attractions
+>>>>>>> f6efa244d151903b4f4fee2a051fe3242f1ee4a2
         </a>
 
         {/* nav toggler button */}
@@ -90,24 +136,19 @@ const Navbar = ({ handleLoginClick }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <NavLink className="nav-link" exact activeClassName="nav-link--active" aria-current="page" to="/">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/event">
+              <NavLink className="nav-link" activeClassName="nav-link--active" aria-current="page" to="/event">
                 Events
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/blogs">
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link " aria-current="page" to="/about">
+              <NavLink className="nav-link" activeClassName="nav-link--active" aria-current="page" to="/about">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
               <a
@@ -116,6 +157,15 @@ const Navbar = ({ handleLoginClick }) => {
                 onClick={handleClick}
               >
                 Sign In
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link contact"
+                aria-current="page"
+                onClick={handleClickB}
+              >
+                Contact
               </a>
             </li>
           </ul>

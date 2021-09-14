@@ -11,8 +11,7 @@ class Headlines extends Component {
     }
  
     componentDidMount() {
-        const apiUrl =
-            "https://newsapi.org/v2/everything?q=cincinnati&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
+        const apiUrl = process.env.REACT_APP_HEADLINES_URI;
         axios.get(apiUrl)
             .then((response) => {
                 this.setState({
@@ -29,7 +28,7 @@ class Headlines extends Component {
     }
  
     render() {
-        return <div id="rowNews" className="row">{this.renderItems()}</div>;
+        return <div id="rowNews" className="row d-flex">{this.renderItems()}</div>;
     }
 }
  
