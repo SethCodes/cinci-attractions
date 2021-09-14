@@ -120,7 +120,7 @@ console.log(attractions);
   return (
     <div className="container-fluid">
       <div className="carouselDown">
-        <AliceCarousel autoPlay autoPlayInterval="3000">
+        <AliceCarousel autoPlay autoPlayInterval="3000" infinite="true">
           <img src={images} className="sliderimg" alt="" />
           <img src={image2} className="sliderimg" alt="" />
           <img src={image3} className="sliderimg" alt="" />
@@ -156,7 +156,7 @@ console.log(attractions);
       </div>
 
      <div className="container-fluid">
-     <div className="row" id="attractRow">
+     <div className="row">
           {attractions.map((attraction) => {
             return (
               <div
@@ -165,7 +165,6 @@ console.log(attractions);
                 style={{
                   backgroundImage: `url("${attraction.imageUrl}")`
                 }}
-                id="attractImage"
               >
                 <AttractionCard
                   id={attraction.id}

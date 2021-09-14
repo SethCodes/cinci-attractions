@@ -71,8 +71,13 @@ const ContactForm = ({ isShowContact }) => {
             </form>
             </div>
         </div>
+              
+       
+       
+       
+      
+       
         </div>
     );
 }
-
 export default ContactForm;
