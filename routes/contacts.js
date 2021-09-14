@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const Contact = require('../models/contact');
 
-
-
 router.route('/').get((req, res) => {
     Contact.find()
     .then((contact) => res.json(contact))
@@ -10,21 +8,22 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) =>{
-    const email = req.body.email
-    const password = req.body.password
-
+    const name = req.body.name;
+    const email = req.body.email;
+    const subject = req.body.subject;
+    const message = req.body.message;
 
     const newContacts= new Contact({
+        name: name,
         email: email,
-        password: password,
+        subject: subject,
+        message: message
     });
 
     newContacts.save()
-    .then(() => res.json('Login add'))
+    .then(() => res.json('Contact form added!'))
     .catch(err => res.json(`Error: ${err}`));
 
 });
-
-
 
 module.exports = router;
