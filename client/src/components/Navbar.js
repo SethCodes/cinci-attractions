@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import dotenv from "dotenv";
-import BACKEND_URL from "../config";
+
+
+
 
 const Navbar = ({ handleLoginClick }) => {
   const [weather, setWeather] = useState("");
-  // const [temp, setTemp] = useState("");
-  // const [icon, setIcon] = useState("");
-  // const [active, setactive] = useState(false);
-  const temp = "";
-  const icon = "";
-
-  dotenv.config();
+  const [temp, setTemp] = useState("");
+  const [icon, setIcon] = useState("");
+  const [active, setactive] = useState(false);
 
   const weatherIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
@@ -21,30 +18,34 @@ const Navbar = ({ handleLoginClick }) => {
 
   if (shortTemp.length > 2) {
     shortTemp = shortTemp.substring(0, 2);
-    // setTemp(shortTemp);
+    setTemp(shortTemp);
   }
+  
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=${process.env.WEATHER_API}&units=imperial`;
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
-  // useEffect(() => {
-  //   const getWeather = async () => {
-  //     const res = await axios.get(url);
-  //     console.log(res);
-  //     setWeather(res.data.weather[0].main);
-  //     setIcon(res.data.weather[0].icon);
-  //     setTemp(res.data.main.temp);
-  //   };
-  //   getWeather();
-  // console.log(weather)
-  // }, [weather]);
+
+  // const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=${process.env.REACT_APP_WEATHER_API}&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=Cincinnati&appid=782a3ff54a8d337614b461d3cb2c5333&units=imperial`;
   useEffect(() => {
-    axios.get(`${BACKEND_URL}/api`).then(res => res.json(res));
+    const getWeather = async () => {
+      const res = await axios.get(url);
+      console.log(res);
+      setWeather(res.data.weather[0].main);
+      setIcon(res.data.weather[0].icon);
+      setTemp(res.data.main.temp);
+    };
+    getWeather();
+  }, [weather]);
 
+//   useEffect(() => {
+//     const getWeather = async () => {
+//       const res = await axios.get(`${BACKEND_URL}/api`);
+//       console.log(res.data);
 
+//     }
+// getWeather();
 
-
-      
-  }, []);
+//   }, [])
+  
 
   const handleClick = () => {
     handleLoginClick();
