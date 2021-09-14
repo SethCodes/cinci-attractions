@@ -157,7 +157,6 @@ label {
   background: transparent;
   transition: 1s;
   outline: none;
-  color: rgb(255, 255, 255) !important;
 }
 
 .login-btn {
@@ -289,24 +288,4 @@ padding: 0.4em 0.4em;
     font-weight: 700;
   font-size: 1.5rem;
   }
-}
-
-/*Attractions blogs*/
-#attractRow {
-  width: 100%;
-  margin: 0 !important;
-}
-#attractImage {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/*Navbar - on hover & active tab*/
-.nav-link:hover {
-  transform: translateY(-2px);
-}
-.nav-link--active {
-  font-weight:bolder !important;
-  color: #127ce6 !important;
-  transition: border-bottom .5s ease-in-out;
 }
