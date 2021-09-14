@@ -11,8 +11,7 @@ class Headlines extends Component {
     }
  
     async componentDidMount() {
-        const apiUrl = await process.env.HEADLINES_URI ||
-            "https://newsapi.org/v2/everything?q=cincinnati&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
+        const apiUrl = process.env.HEADLINES_URI || "https://newsapi.org/v2/everything?q=cincinnati&pageSize=8&apiKey=bbac26f2a1734825959bac16ed90df5c";
         await axios.get(apiUrl)
             .then((response) => {
                 this.setState({
