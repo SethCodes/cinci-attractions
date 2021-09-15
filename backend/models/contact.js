@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const contactSchema = new Schema({
-   
     name:{
         type: String,
         require: [true, 'Please enter a name'],
@@ -23,6 +22,7 @@ const contactSchema = new Schema({
         require: [true, 'Please enter a message'],
         maxLength: [600, 'Maximum length is 600 characters']
     },
+ 
  
 }, {timestamps: true })
 

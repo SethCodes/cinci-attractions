@@ -32,7 +32,7 @@ const onSubmit = (e) => {
         <div className={ `${!isShowLogin ? "active" : ""} show`} >
         <div className="login-form">
         <div className="form-box solid">
-        <form action="/" method="POST" onSubmit={onSubmit}>
+        <form action="/" method="POST" >
             <h1 className="login-text"> Sign In</h1>
             <br />
             <label>Username</label>

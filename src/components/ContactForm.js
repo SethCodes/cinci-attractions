@@ -32,7 +32,7 @@ const ContactForm = ({ isShowContact }) => {
         }
     
        axios.post(BACKEND_URL +'/Contact/add', User)
-       .then(res => console.log(res.data))
+       .then(message => res.json(message))
        .catch(err => console.log(err));
     }
 
@@ -67,7 +67,7 @@ const ContactForm = ({ isShowContact }) => {
                 className="contact-box"
                 onChange={onChangeMessage}
                 /> <br /><br />
-                <input type="submit" value="Send" className="contact-btn" required/>
+                <input type="submit" value="Send" onSubmit={onSubmit} className="contact-btn" required/>
             </form>
             </div>
         </div>
