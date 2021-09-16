@@ -32,7 +32,7 @@ const ContactForm = ({ isShowContact }) => {
         }
     
        axios.post(BACKEND_URL +'/Contact/add', User)
-       .then(res => console.log(res.data))
+       .then(response => console.log(response.data))
        .catch(err => console.log(err));
     }
 
